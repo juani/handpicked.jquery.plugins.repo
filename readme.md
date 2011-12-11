@@ -34,7 +34,7 @@ Here are links to the individual demos:
 - http://iwantaneff.in/repo/plugins/effects-ui/pointpoint/
 - http://iwantaneff.in/repo/plugins/effects-ui/jqcloud/
 
-FORMS + CONTROLS
+- FORMS + CONTROLS
 - http://iwantaneff.in/repo/plugins/forms-controls/dropkick/
 - http://iwantaneff.in/repo/plugins/forms-controls/fancy.form/
 - http://iwantaneff.in/repo/plugins/forms-controls/field.labels/
@@ -50,7 +50,7 @@ FORMS + CONTROLS
 - http://iwantaneff.in/repo/plugins/forms-controls/yaselect/
 - http://iwantaneff.in/repo/plugins/forms-controls/markitup/
 
-MENUES + NAV
+- MENUS + NAV
 - http://iwantaneff.in/repo/plugins/menu-nav/accordion/
 - http://iwantaneff.in/repo/plugins/menu-nav/activebar/
 - http://iwantaneff.in/repo/plugins/menu-nav/drill.down/
@@ -67,7 +67,7 @@ MENUES + NAV
 - http://iwantaneff.in/repo/plugins/menu-nav/animated.text.icon/
 - http://iwantaneff.in/repo/plugins/menu-nav/ajaxy/
 
-IMAGE GALLERIES
+- IMAGE GALLERIES
 - http://iwantaneff.in/repo/plugins/image-galleries/fullscreenr/
 - http://iwantaneff.in/repo/plugins/image-galleries/picassa.gallery/
 - http://iwantaneff.in/repo/plugins/image-galleries/sideways/
@@ -75,14 +75,14 @@ IMAGE GALLERIES
 - http://iwantaneff.in/repo/plugins/image-galleries/content.carousel/
 - http://iwantaneff.in/repo/plugins/image-galleries/photofy/
 
-MISC
+- MISC
 - http://iwantaneff.in/repo/plugins/misc/jreject/
 - http://iwantaneff.in/repo/plugins/misc/preloader/
 - http://iwantaneff.in/repo/plugins/misc/snake/
 - http://iwantaneff.in/repo/plugins/misc/pretty.loader/
 - http://iwantaneff.in/repo/plugins/misc/spin.js/
 
-MODALS + LIGHTBOXES
+- MODALS + LIGHTBOXES
 - http://iwantaneff.in/repo/plugins/modals-lightboxes/modaldialog/
 - http://iwantaneff.in/repo/plugins/modals-lightboxes/prettyphoto/
 - http://iwantaneff.in/repo/plugins/modals-lightboxes/jquery.popeye/
@@ -92,7 +92,7 @@ MODALS + LIGHTBOXES
 - http://iwantaneff.in/repo/plugins/modals-lightboxes/reveal/
 - http://iwantaneff.in/repo/plugins/modals-lightboxes/facebox/
 
-SCROLLING
+- SCROLLING
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/custom.scroller/
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/fixed/
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/mop.slider/
@@ -102,14 +102,14 @@ SCROLLING
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/parallax/
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/jquerycustomscrollbar/
 
-SLIDERS
+- SLIDERS
 - http://iwantaneff.in/repo/plugins/sliders/elastislide/
 - http://iwantaneff.in/repo/plugins/sliders/orbit/
 - http://iwantaneff.in/repo/plugins/sliders/showcase/
 - http://iwantaneff.in/repo/plugins/sliders/slider/
 - http://iwantaneff.in/repo/plugins/sliders/slides/
 
-SOCIAL
+- SOCIAL
 - http://iwantaneff.in/repo/plugins/social/feed.menu/
 - http://iwantaneff.in/repo/plugins/social/ishare.widget/
 - http://iwantaneff.in/repo/plugins/social/jSocialize/
@@ -119,7 +119,7 @@ SOCIAL
 - http://iwantaneff.in/repo/plugins/social/youtube.background/
 - http://iwantaneff.in/repo/plugins/social/youtube.custom/
 
-TWITTER
+- TWITTER
 - http://iwantaneff.in/repo/plugins/twitter/tweet.to.download/
 - http://iwantaneff.in/repo/plugins/twitter/tweetable/
 - http://iwantaneff.in/repo/plugins/twitter/tweetgrab/
