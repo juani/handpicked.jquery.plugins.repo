@@ -9,7 +9,6 @@ $(document).ready(function () {
 // This fixes a bug in Chrome that doesn't change the SRC / URL of the frame to the one you specified, or 'set' via JS.
 // The actual URL's content is loaded into the frame, but the user doesn't see any change, unless he/she resizes the window
 // Or otherwise disturbs Chrome's paint / reflow mechanism
-// Annoying, I know, but don't worry, I submit bugs like this to the DEV Team EVERYDAY, and you should too!
 // http://www.google.com/support/forum/p/Chrome/thread?tid=2c81c3e3fd99b388&hl=en
 // http://www.google.com/chrome/intl/en/webmasters-faq.html#charencoding
 $('#receiver').load(function() {

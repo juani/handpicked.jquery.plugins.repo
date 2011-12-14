@@ -159,25 +159,3 @@ if($auth['use']){
 		<script src="_tastydir/js/site.js"></script>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
