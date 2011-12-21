@@ -94,6 +94,9 @@ Here are links to the individual demos:
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/jquery.scroll/
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/parallax/
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/jquerycustomscrollbar/
+- http://iwantaneff.in/repo/plugins/droid-touch/droid.overscroll/
+- http://iwantaneff.in/repo/plugins/droid-touch/droid.scroll/
+- http://iwantaneff.in/repo/plugins/droid-touch/nano.scroll/
 - http://iwantaneff.in/repo/plugins/sliders/elastislide/
 - http://iwantaneff.in/repo/plugins/sliders/orbit/
 - http://iwantaneff.in/repo/plugins/sliders/showcase/
@@ -101,15 +104,17 @@ Here are links to the individual demos:
 - http://iwantaneff.in/repo/plugins/sliders/slides/
 - http://iwantaneff.in/repo/plugins/social/feed.menu/
 - http://iwantaneff.in/repo/plugins/social/ishare.widget/
-- http://iwantaneff.in/repo/plugins/social/jSocialize/
 - http://iwantaneff.in/repo/plugins/social/lifestream/
 - http://iwantaneff.in/repo/plugins/social/sharethis/
 - http://iwantaneff.in/repo/plugins/social/so.so.social/
 - http://iwantaneff.in/repo/plugins/social/youtube.background/
 - http://iwantaneff.in/repo/plugins/social/youtube.custom/
+- http://iwantaneff.in/repo/plugins/social/jquery.sharrre
+- http://iwantaneff.in/repo/plugins/social/socialite
 - http://iwantaneff.in/repo/plugins/twitter/tweet.to.download/
 - http://iwantaneff.in/repo/plugins/twitter/tweetable/
 - http://iwantaneff.in/repo/plugins/twitter/tweetgrab/
+
 
 Long live the art of the jQuery plugin.
 ======================================
