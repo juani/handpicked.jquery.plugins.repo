@@ -72,6 +72,7 @@ Here are links to the individual demos:
 - http://iwantaneff.in/repo/plugins/image-galleries/content.carousel/
 - http://iwantaneff.in/repo/plugins/image-galleries/photofy/
 - http://iwantaneff.in/repo/plugins/image-galleries/minimit/
+- http://iwantaneff.in/repo/plugins/image-galleries/supersized/
 - http://iwantaneff.in/repo/plugins/misc/jreject/
 - http://iwantaneff.in/repo/plugins/misc/snake/
 - http://iwantaneff.in/repo/plugins/misc/pretty.loader/
@@ -94,6 +95,7 @@ Here are links to the individual demos:
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/jquery.scroll/
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/parallax/
 - http://iwantaneff.in/repo/plugins/scrollbars-onscroll/jquerycustomscrollbar/
+- http://iwantaneff.in/repo/plugins/scrollbars-onscroll/scrollorama/
 - http://iwantaneff.in/repo/plugins/droid-touch/droid.overscroll/
 - http://iwantaneff.in/repo/plugins/droid-touch/droid.scroll/
 - http://iwantaneff.in/repo/plugins/droid-touch/nano.scroll/

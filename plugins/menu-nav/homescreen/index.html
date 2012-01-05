@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>iOS Home Screen with CoffeeScript | Tutorialzine Demo</title>
+        
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+
+		
+		<section id="homeScreen">
+			<div id="mask">
+				<div id="allScreens"></div>
+			</div>
+			
+			<ul id="indicators"></ul>
+			
+			<div id="dock"></div>
+		</section>
+
+        <footer>
+	        <h2><i>Tutorial:</i> Creating an iOS-like Home Screen with CoffeeScript</h2>
+            <a class="tzine" href="http://tutorialzine.com/2011/10/ios-homescreen-coffeescript/">Head on to <i>Tutorial<b>zine</b></i> to download this example</a>
+        </footer>
+        
+        <!-- JavaScript includes -->
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+		<script src="assets/js/touchable.js"></script>
+        <script src="assets/js/coffee-script.js"></script>
+        
+        		
+		<script type="text/coffeescript">
+			
+			# The Icon class. 
+			
+			class Icon
+
+				# The constructor. The -> arrow signifies
+				# a function definition.
+				
+				constructor: (@id, @title) ->
+					# @ is synonymous for "this". The id and title parameters
+					# of the construtor are automatically added as this.id and this.title
+					
+					# @markup holds the HTML of the icon. It is
+					# transformed to this.markup behind the scenes.
+					
+					@markup = "<div class='icon' style='background-image:url(assets/img/icons/#{@id}.png)'
+								 title='#{@title}'></div>"
+			
+
+			# The DockIcon class inherits from Icon
+			
+			class DockIcon extends Icon
+				constructor: (id, title)->
+
+					# This calls the constructor if Icon
+					
+					super(id, title)
+					
+					# Changing the class name of the generated HTML 
+					@markup = @markup.replace("class='icon'","class='dockicon'")
+			
+			
+			# The Screen Class
+			
+			class Screen
+			
+				# Function arguments can have default parameters
+				constructor: (icons = [])->
+					@icons = icons
+				
+				attachIcons: (icons = [])->
+					Array.prototype.push.apply(@icons, icons)
+
+				generate: ->
+					markup = []
+					
+					# Looping through the @icons array
+					markup.push(icon.markup) for icon in @icons
+					
+					# The last line of every function is implicitly returned
+					"<div class='screen'>#{markup.join('')}</div>"
+				
+
+			class Stage
+			
+				# The width of our "device" screen. This is 
+				# basically the width of the #mask div.
+				
+				screenWidth: 332
+			
+				constructor: (icons)->
+					
+					@currentScreen = 0
+					@screens = []
+					
+					# Calculating the number of screens
+					# necessary to display all the icons
+					
+					num = Math.ceil(icons.length / 9)
+					i = 0
+					
+					while num--
+						# we pass a slice of the icons array
+						s = new Screen(icons[i...i+9])
+						
+						# adding the screen to the local screens array
+						@screens.push(s)
+						
+						i+=9
+				
+				# This method populates the passed element with HTML
+				addScreensTo: (element)->
+				
+					@element = $(element)
+					@element.width(@screens.length*@screenWidth)
+					
+					for screen in @screens
+						@element.append(screen.generate())
+						
+				addIndicatorsTo: (elem)->
+				
+					# This method creates the small
+					# circular indicatiors
+					 
+					@ul = $(elem)
+					
+					for screen in @screens
+						@ul.append('<li>')
+					
+					@ul.find('li:first').addClass('active');
+					
+				goTo: (screenNum)->
+				
+					# This method animates the allScreen div in
+					# order to expose the needed screen in #mask
+					
+					if @element.is(':animated')
+						return false
+					
+					# if this is the first or last screen,
+					# run the end of scroll animation
+					
+					if @currentScreen == screenNum
+					
+						# Parallel assignment:
+						[from, to] = ['+=15','-=15']
+						
+						if @currentScreen != 0
+							[from, to] = [to, from]
+						
+						@element.animate( { marginLeft : from }, 150 )
+								.animate( { marginLeft : to }, 150 )
+					else
+						# If everything is ok, animate the transition between the screens.
+						
+						# The fat arrow => preserves the context of "this"
+						
+						@element.animate( { marginLeft:-screenNum*@screenWidth }, => @currentScreen = screenNum )
+						@ul.find('li').removeClass('active').eq(screenNum).addClass('active');
+						
+				next: ->
+					toShow = @currentScreen+1
+					
+					# If there is no next screen, show
+					# the current one
+					
+					if toShow == @screens.length
+						toShow = @screens.length - 1
+					
+					@goTo(toShow)
+					
+				previous: ->
+					toShow = @currentScreen-1
+					
+					# If there is no previous screen,
+					# show the current one
+					
+					if toShow == -1
+						toShow = 0
+					
+					@goTo(toShow)
+			
+			# This is equivalent to $('document').ready(function(){}):
+			
+			$ ->
+			
+				allIcons = [
+					new Icon('Photos', 'Photo Gallery'), new Icon('Maps', 'Google Maps')
+					new Icon('Chuzzle', 'Chuzzle'), new Icon('Safari', 'Safari')
+					new Icon('Weather', 'Weather'), new Icon('nes', 'NES Emulator')
+					new Icon('Calendar', 'Calendar'), new Icon('Clock', 'Clock')
+					new Icon('BossPrefs', 'Boss Prefs'), new Icon('Chess', 'Chess')
+					new Icon('Mail', 'Mail'), new Icon('Phone', 'Phone')
+					new Icon('SMS', 'SMS Center'), new Icon('Camera', 'Camera')
+					new Icon('iPod', 'iPod'), new Icon('Calculator', 'Calculator')
+					new Icon('Music', 'Music'), new Icon('Poof', 'Poof')
+					new Icon('Settings', 'Settings'), new Icon('YouTube', 'Youtube')
+					new Icon('psx4all', 'PSx4All'), new Icon('VideoRecorder', 'Record Video')
+					new Icon('Installer', 'Installer'), new Icon('Notes', 'Notes')
+					new Icon('RagingThunder', 'RagingThunder'), new Icon('Stocks', 'Stocks')
+					new Icon('genesis4iphone', 'Genesis'), new Icon('snes4iphone', 'SNES Emulator')
+					new Icon('Calendar', 'Calendar'), new Icon('Clock', 'Clock')
+					new Icon('Photos', 'Photo Gallery'), new Icon('Maps', 'Google Maps')
+				]
+			
+				dockIcons = [
+					new DockIcon('Camera', 'Camera')
+					new DockIcon('iPod', 'iPod')
+					new DockIcon('Calculator', 'Calculator')
+				]
+			
+				allScreens = $('#allScreens')
+				
+				# Using the Touchable plugin to listen for
+				# touch based events:
+				
+				allScreens.Touchable();
+
+
+				# Creating a new stage object
+				stage = new Stage(allIcons)
+				
+				stage.addScreensTo(allScreens)
+				stage.addIndicatorsTo('#indicators')
+				
+				# Listening for the touchablemove event.
+				# Notice the callback function
+				
+				allScreens.bind 'touchablemove', (e,touch)->	
+					stage.next() if touch.currentDelta.x < -5
+					stage.previous() if touch.currentDelta.x > 5
+				
+				
+				# Adding the dock icons:
+				
+				dock = $('#dock')
+				
+				for icon in dockIcons
+					dock.append(icon.markup)
+				
+					
+		</script>
+    
+    </body>
+</html>
+
