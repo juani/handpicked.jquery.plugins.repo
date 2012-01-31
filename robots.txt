@@ -20,4 +20,3 @@
 #                              ///       \\\
 #                             ///         \\\
 #                     
-# You Are Hereby Welcome To Scrape, Crawl, Rob, And Pillage This Server
