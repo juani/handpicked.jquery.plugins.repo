@@ -1,5 +1,7 @@
 ## The Handpicked jQuery Plugins Repository
 
+### Supercharge your website!
+
 Author: [David Higgins][1]
 
 Website: [http://iwantaneff.in/repo/][2]
