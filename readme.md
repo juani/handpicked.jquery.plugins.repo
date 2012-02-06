@@ -1,4 +1,4 @@
-## « The Handpicked jQuery Plugins Repository »
+## The Handpicked jQuery Plugins Repository
 
 Author: [David Higgins][1]
 
