@@ -1,16 +1,90 @@
-======================================
-You are browsing the Github home of The jQuery Handpicked Plugins Repo
+## « The Handpicked jQuery Plugins Repository »
 
-Browse live demos of the plugins here: - - http://iwantaneff.in/repo/
+Author: [David Higgins][1]
 
-You can use Github to download individual scripts as .ZIP files, or use an alternative file dump browser here:
+Website: [http://iwantaneff.in/repo/][2]
 
-- http://iwantaneff.in/repo/browser/
+Filedump: [http://iwantaneff.in/repo/browser/][3]
 
-If you are linking to indvidual scripts, consult 'index.html' for issues regarding the `path` to the script / URL.
+Blogpost: [http://higg.in/the-handpicked-jquery-plugins-repository][4]
 
-Long live the art of the jQuery plugin.
-======================================
+Last Updated: January 31, 2012
+
+You are browsing the Github home of **The jQuery Handpicked Plugins Repo**
+
+
+----------
+
+
+  [1]: http://davidhiggins.me/
+  [2]: http://iwantaneff.in/repo/
+  [3]: http://iwantaneff.in/repo/browser/
+  [4]: http://higg.in/the-handpicked-jquery-plugins-repository
+  [5]: http://iwantaneff.in/repo/browser/
+
+> One of the greatest things about
+> jQuery is the ever-expanding userbase.
+> In the past it was common for
+> libraries to have a small following,
+> with only a handful of plugins and
+> widgets made by advocates of the
+> library. Now it seems everyone has
+> their own jQuery plugin. You only have
+> to look on Github to see many
+> programmers have thrown their
+> two-cents into the jQuery community.
+> It seems you have the dabblers who
+> make small plugins to test their
+> skill, and (usually) end-up creating
+> something truely awesome, and the
+> aficionados who only do jQuery stuff
+> (and only very rarely throw out good
+> code, though some do).
+> 
+> Over the past three or so years I have
+> been assimilating and trying to make
+> sense of the sheer volume of these
+> plugins, and over the course of my
+> constant checking of del.icio.us, and
+> various other javascript related
+> sites, I came up with a jQuery project
+> of my own. I couldn't help it, I had
+> to respond to this phenomenon. You
+> see, I collect jQuery plugins that I
+> find interesting, and if time permits,
+> use them extensively in my projects.
+> It turns out, I only like good jQuery
+> plugins, that is, plugins which bring
+> something new to the table, or offer a
+> unique way of interacting with a
+> website that hasn't been done before.
+> 
+> Sadly, some plugin authors don't get
+> the exposure they deserve for their
+> work, as usually references to a
+> particular plugin are drowned by the
+> noise of the dreaded 'link list' /
+> 'roundup' type post. Hands up how many
+> people discovered a plugin they really
+> liked by wading through a huge list on
+> some blog? (*Puts hands up*). If the
+> web-as-app needs better
+> discover-ability techniques, then
+> surely we must get rid of bloated
+> content farms serving up the 'coolest
+> jquery plugins of 2011' type posts,
+> and actually create something a bit
+> more human and above all, of high
+> quality.
+> 
+> This is a 'handpicked' repository of
+> jQuery scripts, so don't be offended
+> when you see a script you don't like.
+> If you're annoyed certain plugins
+> didn't make the list, create your own
+> repo! I've even made the entire site's
+> source code available so you can do
+> just that.
                                                                                 
                                                                                 
                                                                                 
