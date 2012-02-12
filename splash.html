@@ -78,6 +78,9 @@ right: 4px;
 body{
 padding-right: 90px;
 }
+.sc{
+text-align:center;
+}
 </style>
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -91,10 +94,10 @@ padding-right: 90px;
 <div class="overlay"></div>
 <div class="social"></div>
 
-<center>
+<div class="sc">
 <h1 class="h a">The Handpicked jQuery Plugins Repository</h1><br>
 <h2 class="h b">Supercharge Your Website!</h2>
-</center>
+</div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
   <script src="jquery.backstretch.js"></script>
@@ -103,12 +106,42 @@ padding-right: 90px;
   
 
 <script>
+
 jQuery(function($){
 $(".social").addSocial();
 $.backstretch("s.jpg");
 $("h1").fitText();
 $("h2").fitText();
+
+    setTimeout(function(){
+    
+    sch = parseInt($(".sc").css('height'))
+    
+    schd = -(sch / 2)
+    
+    $(".sc").css('position', 'absolute');
+    $(".sc").css('top', '50%');
+    $(".sc").css('margin-top', schd);
+    
+    },0)
+    
+    $(window).resize(function () {
+    setTimeout(function(){
+    
+    sch = parseInt($(".sc").css('height'))
+    
+    schd = -(sch / 2)
+    
+    $(".sc").css('position', 'absolute');
+    $(".sc").css('top', '50%');
+    $(".sc").css('margin-top', schd);
+    
+    },0)
+    });
+    
 });
+
+
 </script>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
