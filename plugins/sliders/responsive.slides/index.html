@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ResponsiveSlides.js &middot; Responsive jQuery Slideshow</title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+  <link rel="stylesheet" href="styles.css" />
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="responsiveslides.js"></script>
+  <script>
+    jQuery(function() {
+
+      // Slideshow 1
+      $("#slides").responsiveSlides({
+        maxwidth: 800
+      });
+
+      // Slideshow 2
+      $("#slides2").responsiveSlides({
+        fade: 300,
+        auto: false,
+        maxwidth: 540,
+        namespace: 'anotherslideshow'
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>ResponsiveSlides.js</h1>
+    <h2>Responsive jQuery Slideshow plugin that weights under 1kb</h2>
+
+    <!-- Slideshow 1 -->
+    <div id="slides">
+      <img src="1.jpg" alt="" />
+      <img src="2.jpg" alt="" />
+      <img src="3.jpg" alt="" />
+    </div>
+
+    <!-- Slideshow 2 -->
+    <div id="slides2">
+      <img src="1.jpg" alt="" />
+      <img src="2.jpg" alt="" />
+      <img src="3.jpg" alt="" />
+    </div>
+
+    <a href="http://responsive-slides.viljamis.com/" id="download">See the documentation</a>
+    <p class="footer">ResponsiveSlides.js is created by <a href="http://viljamis.com">@viljamis</a>. It's released under the MIT license. If you have any questions or feedback you can use the <a href="https://github.com/viljami/ResponsiveSlides.js">GitHub project page</a>.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<html>
+  <head>
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="jQuery.select2Buttons.js"></script>
+    <link rel="stylesheet" type="text/css" href="select2Buttons.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>jQuery Select 2 Buttons Plugin</title>
+
+  </head>
+  <body>
+    <h1>Select 2 Buttons JQuery Plugin</h1>
+
+    <p>
+    This is a demo page for the Select2Buttons jQuery plugin.  Which
+    provides an alternative way of displaying standard HTML selects.
+    <br>
+    <a href="https://github.com/o-sam-o/jquery.select2Buttons">The documentation and source is available here.</a>
+    </p>
+
+    <form method="GET">
+      <p>
+        <label for="simple-select">Simple Select:</label>
+        <select name="simple-select" class="standard-demo">
+          <option>One</option>
+          <option>Two</option>
+          <option>Three</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="preselected-select">Preselected Select:</label>
+        <select name="preselected-select" class="standard-demo">
+          <option>One</option>
+          <option selected="selected">Selected</option>
+          <option>Three</option>
+        </select>
+      </p>
+
+       <p>
+        <label for="disabled-option-select">Disabled Option Select:</label>
+        <select name="disabled-option-select" class="standard-demo">
+          <option>One</option>
+          <option disabled="disabled">Disabled</option>
+          <option>Three</option>
+        </select>
+      </p>
+
+       <p>
+        <label for="disabled-select">Disabled Select:</label>
+        <select name="disabled-select" disabled="true" class="standard-demo">
+          <option>One</option>
+          <option>Two</option>
+          <option>Three</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="js-callback-select">JS Callback Select:</label>
+        <select name="js-callback-select" class="standard-demo">
+          <option>One</option>
+          <option>Two</option>
+          <option>Three</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="no-default-select">No Default Select:</label>
+        <select name="no-default-select">
+          <option>One</option>
+          <option>Two</option>
+          <option>Three</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="opt-group-select">Opt Group Select:</label>
+        <select name="opt-group-select" class="standard-demo">
+          <optgroup label="Numbers">
+            <option>One</option>
+            <option>Two</option>
+            <option>Three</option>
+          </optgroup>
+          <optgroup label="Colours">
+            <option>Red</option>
+            <option>Blue</option>
+            <option>Green</option>
+          </optgroup>
+        </select>
+      </p>
+
+      <p>
+        <label for="multi-select">Multiselect:</label>
+        <select name="multi-select" multiple="multiple" class="standard-demo">
+          <option>One</option>
+          <option>Two</option>
+          <option>Three</option>
+        </select>
+      </p>
+
+      <p>
+        <input type="submit"/>
+      </p>
+    </form>
+
+    <script>
+      $('.standard-demo').select2Buttons();
+
+      $('select[name=js-callback-select]').change(function() {
+        alert('Changed to ' + $(this).val());
+      });
+
+      $('select[name=no-default-select]').select2Buttons({noDefault: true});
+    </script>
+
+  </body>
+</html>

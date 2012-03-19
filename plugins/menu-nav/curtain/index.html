@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+    <title>Curtain.js</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="curtain.css">
+</head>
+<body>
+
+
+
+<ul class="menu">
+    <li><button href="#up">&#8593;</button></li>
+    <li><button href="#down">&#8595;</button></li>
+</ul>
+
+<ol class="curtains">
+    <li id="intro" class="cover">
+        
+        <!-- Fork me on github - Ribbon -->
+        <a href="https://github.com/Victa/curtain.js"><img style="position: absolute; top: 0; left: 0; border: 0;z-index:2;" src="https://a248.e.akamai.net/assets.github.com/img/bec6c51521dcc8148146135149fe06a9cc737577/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+
+        <div class="presentation-wrapper">
+            <h1>Curtain.js</h1>
+            
+            <p>
+                This plugin allows you to create a web page with multiple fixed panels that unroll with an
+                amusing effect. Exactly like a curtain rises.
+                <br><br>
+                To navigate, you can use your keyboard instead the scrollbar or your mousewheel to
+                navigate into the document. But that's not all, there is more features! For example,
+                you can easily add a fixed element or multiple "steps" element into a pannel.
+                <br><br>
+                I created this plugin for the upcoming website of my friend <a href="http://artographik.fr/">Etienne</a>.
+                And I decided to deliver this one as an open source project. I would like you to
+                note that the transition effect between two panels is extensively inspired by
+                <a href="http://editsquarterly.com/">Edits Quarterly</a> We were also such inspired
+                by the following websites:<br>
+                <br>
+                <a href="http://www.interviewmagazine.com">http://www.interviewmagazine.com</a><br>
+                <a href="http://dbworks.pro">http://dbworks.pro</a><br>
+                <a href="http://www.deuxhuithuit.com/en">http://www.deuxhuithuit.com/en</a><br>
+                <a href="http://madebygrave.com">http://madebygrave.com</a><br>
+                <a href="http://www.boston.com/bigpicture/">http://www.boston.com/bigpicture</a><br>
+                <br>
+                Feel free to fork the project on <a href="https://github.com/Victa/curtain.js">github</a>
+                or ping me on <a href="http://twitter.com/_victa">twitter</a> for any comments.
+                <em>Please be lenient. I'm currently working on the plugin.</em>
+            </p>
+            <div class="btns">
+                <a href="#download" class="btn btn-small">Download</a>
+                <a href="#instructions" class="btn btn-small">Instructions</a>
+            </div>
+        </div>
+
+    </li>
+    <li id="instructions">
+         <div class="documentation-wrapper">
+            <h1>Documentation</h1>
+            <h2>Basic Usage</h2>
+            <p>Usage is very straightforward, simply include curtain.js file in the page, along with jQuery.</p>
+<pre>&lt;script src="js/libs/jquery.js"&gt;&lt;/script&gt;  
+&lt;script src="js/libs/curtain.js"&gt;&lt;/script&gt;</pre>
+            <p>And don't forget to add the base stylesheet</p>
+<pre>&lt;link rel="stylesheet" href="curtain.css"></pre>
+            <p>Then call <code>$('.curtains').curtain();</code> to launch the plugin. You can add a set of optional options.</p>
+            <h2>Options</h2>
+            <p>Valid options for curtain.js are:</p>
+            <ul>
+                <li><code>scrollSpeed</code> - Adjust the scroll speed (default <code>400</code>)</li>
+                <li><code>menu</code> - Bind event on "up" or/and "down" button (default <code>null</code>)</li>
+            </ul>
+            <h2>Example</h2>
+            <p>Setup the correct element structure:</p>
+<pre>&lt;ul class="menu">
+    &lt;li>&lt;a href="#up">&#8593;&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#down">&#8595;&lt;/a>&lt;/li>
+&lt;/ul>
+
+&lt;ol class="curtains"&gt;
+    &lt;li class="cover"&gt; 
+        your content
+    &lt;/li&gt;
+    &lt;li&gt;
+         &lt;div class="fixed"&gt; &lt;!-- if you need a "fixed" content --&gt;
+            a fixed content
+        &lt;/div&gt;
+        ...
+    &lt;/li&gt;
+    &lt;li class="cover"&gt;
+        ...
+    &lt;/li&gt;
+    &lt;li &gt;
+        &lt;ul&gt;
+            &lt;li class="step"&gt; ... &lt;/li&gt; &lt;!-- Add the class "step" to an element to  --&gt;
+            &lt;li class="step"&gt; ... &lt;/li&gt; &lt;!-- make a break at this point with keyboard controls  --&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;</pre>
+<p>Then, you can launch the plugin:</p>
+<pre>$(function () {
+    $('.curtains').curtain({
+        scrollSpeed: 600,
+        menu: $('.menu')
+    });
+});
+</pre>
+            <h1>Compatibility</h1>
+            <p>Tested in:<br>
+            iOs 5.0.1 (iPhone + iPad) <em>but the curtain effect is disabled</em><br>
+            Safari 5+<br>
+            Firefox 9+<br>
+            Chrome 17+<br>
+            </p>
+            <h1>Credits</h1>
+            <h2>Author</h2>
+            <p><a href="http://victorcoulon.fr">Victor Coulon</a> or ping me on twitter <a href="http://twitter.com/_victa">http://twitter.com/_victa</a></p>
+            <h2>Licence</h2>
+            <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a>
+        </div>
+    </li>
+    <li class="cover">
+        <div class="cover-wrapper">
+            <img src="img/full.jpg" />
+            <span>A cover with a full background picture</span>
+        </div>
+    </li>
+    <li>
+        <div class="fixed">
+            <h1>A fixed content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+        <div class="content-wrapper">
+            <h1>A static and responsive content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <h2>Lorem ipsum</h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+            amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit
+            amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
+            sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+            lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus
+            faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
+            tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <h2>Lorem ipsum</h2>
+            <img src="img/1.jpeg" alt="">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+            amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit
+            amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
+            sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+            lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus
+            faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
+            tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+            amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit
+            amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
+            sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+            lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus
+            faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
+            tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <h2>Lorem ipsum</h2>
+            <img src="img/2.jpeg" alt="">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+            amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit
+            amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
+            sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+            lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus
+            faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
+            tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <h2>Lorem ipsum</h2>
+            <img src="img/3.jpeg" alt="">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+            amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit
+            amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
+            sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+            lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus
+            faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
+            tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+    </li>
+    <li>
+        <div class="steps-wrapper">
+            <ul class="step-list">
+                <li class="step">
+                    <h1>A step by step panel</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </li>
+                <li class="step cf">
+                    <div class="width50">
+                        <img src="img/1.jpeg" alt="">
+                    </div>
+                    <div class="width50">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Vestibulum tortor quam, feugiat vitae, magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
+                        tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                    </div>
+                </li>
+                <li class="step cf">
+                    <div class="width50">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+                        amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit
+                        amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
+                        sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+                        lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus
+                        faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
+                        tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                    </div>
+                    <div class="width50">
+                        <img src="img/2.jpeg" alt="">
+                    </div>
+                </li>
+                <li class="step cf">
+                    <div class="width50">
+                        <img src="img/3.jpeg" alt="">
+                    </div>                
+                    <div class="width50">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+                        amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit
+                        amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
+                        sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum</p>
+                    </div>
+                </li>
+                <li class="step cf">
+                    <div class="width50">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+                        amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit
+                        amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
+                        sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+                        lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus
+                        faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
+                        tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                    </div>
+                    <div class="width50">
+                        <img src="img/4.jpeg" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li id="download" class="cover">
+        <div class="download-wrapper">
+            <a href="https://github.com/Victa/curtain.js" class="btn">Download <span>on github.com</span></a>
+        </div>
+        <a href="http://twitter.com/_victa" class="follow">Follow me on twitter</a>
+    </li>
+</ol>
+
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="curtain.js"></script>
+<script>
+    $(function(){
+       $('.curtains').curtain({
+           scrollSpeed: 600,
+           menu: $('.menu')
+       }); 
+    });
+</script>
+
+</body>
+</html>

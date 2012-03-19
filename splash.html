@@ -108,6 +108,12 @@ text-align:center;
 <script>
 
 jQuery(function($){
+
+// If peeps bookmark / plus one / like this page, make sure it redirects to the main page
+if(top.frames.length == 0){
+top.location.href='index.html'
+}
+
 $(".social").addSocial();
 $.backstretch("s.jpg");
 $("h1").fitText();

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Demo - jquery.google-plus-plus</title>
+  <!-- Example style, not required for usage-->
+  <style type="text/css" media="screen">
+    html{ background-color:#eeeeee; margin:auto; width:380px; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif }
+    h1{ text-align:center; text-shadow:0 -1px 0 rgba(0,0,0,0.15),0 1px 0 rgba(255,255,255,0.8); font-size:26px }
+    header{ padding:10px; padding-top:10px }
+    footer{ color:#000; text-align:center; font-size:10px; margin-top:10px; line-height:1.5 }
+    footer a{text-decoration:none}
+    .plus-row{ margin:0; padding:0; padding:20px; font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif; text-align:left; border-top:solid 1px #ddd; border-left: solid 1px #fff }
+    .plus-row:hover{ border-left: solid 1px #4d90f0 }
+    .first{ border-top:solid 0px #ddd }
+    .plus-button{ float:right }
+    .logo{ float:left; padding-top:2px; width:16px; margin-right:10px }
+    .list{ background-color:#fff;  border:solid 1px #ccc /*border-radius: 5px;*/}
+  </style>
+</head>
+
+
+<body>
+  <header><h1>jquery.googlePlusOne</h1></header>
+  <div class="list">
+    <div class="plus-row first">Google<div class="plus-button" link="http://www.google.co.uk/"></div></div>
+    <div class="plus-row">YouTube<div class="plus-button" link="http://www.youtube.com/"></div></div>
+    <div class="plus-row">Yahoo!<div class="plus-button" link="http://www.yahoo.co.uk/"></div></div>
+    <div class="plus-row">Wikipedia<div class="plus-button" link="http://www.wikipedia.org/"></div></div>
+    <div class="plus-row">Blogger.com<div class="plus-button" link="http://www.blogger.com/"></div></div>
+    <div class="plus-row">Windows Live<div class="plus-button" link="http://www.live.com/"></div></div>
+    <div class="plus-row">Twitter<div class="plus-button" link="http://www.twitter.com/"></div></div>
+    <div class="plus-row">LinkedIn<div class="plus-button" link="http://www.linkedin.com/"></div></div>
+    <div class="plus-row">MSN<div class="plus-button" link="http://www.msn.com/"></div></div>
+  </div>
+  <footer><a href="https://github.com/laurencedawson">Laurence Dawson</a></footer>
+
+  <!-- Load jQuery and jquery.google-plus-plus -->
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="jQuery.googlePlusOne.js"></script>
+  
+  <!-- Example plugin setup -->
+  <script type="text/javascript" language="javascript"> 
+
+    //Setup the plugin
+    $(document).ready(function(){
+	  $('body').find('.plus-row').googlePlusOne('init');
+	});
+
+  </script>
+
+</body>
