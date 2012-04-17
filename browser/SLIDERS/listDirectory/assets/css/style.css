@@ -1,0 +1,153 @@
+.dir * {
+	padding: 0;
+	margin: 0;
+}
+
+.dir {
+	font: normal 12px "Lucida Grande", Tahoma, Verdana, sans-serif;
+}
+
+.dir a {
+	color: #04a;
+	text-decoration: none;
+}
+.dir a:hover {
+	color: #07d;
+	text-decoration: underline;
+}
+
+.dir .cont {
+	background: #fff;
+	border: 1px solid #898989;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	width: 500px;
+	padding: 10px;
+	margin: 10px auto;
+}
+
+.dir .error {
+	background: #ffc0cb;
+	border: 1px solid #f00;
+	color: #000;
+	text-align: center;
+}
+
+.dir .empty {
+	text-align: center;
+}
+
+.dir li {
+	list-style: none;
+	background: no-repeat center left;
+	border-bottom: 1px solid #eee;
+	line-height: 28px;
+}
+.dir li:hover {
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.dir .navi,
+.dir .count {
+	border-bottom: 1px solid #ddd;
+	color: #676767;
+	font-size: 10px;
+	text-align: left;
+	line-height: 16px;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+.dir .navi {
+	border: none;
+	font-size: 12px;
+	margin: 0;
+}
+.dir .navi a {
+	color: #676767;
+	font-size: 10px;
+	text-decoration: none;
+}
+.dir .navi a:hover,
+.dir .navi a.current {
+	color: #000;
+}
+
+.dir .count a {
+	color: #676767;
+	cursor: pointer;
+	text-decoration: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.dir .count a:hover {
+	color: #000;
+}
+.dir .count span {
+	float: right;
+	color: #676767;
+}
+
+.dir li a {
+	padding-left: 20px;
+}
+
+.dir li span {
+	float: right;
+	color: #aaa;
+	padding: 0 0 0 10px;
+}
+.dir li:hover span {
+	color: #777;
+}
+
+.dir ul.folders li {
+	background-image: url('../imgs/folder.png');
+}
+.dir li.file {
+	background-image: url('../imgs/file.png');
+}
+.dir li.text {
+	background-image: url('../imgs/text.png');
+}
+.dir li.image {
+	background-image: url('../imgs/image.png');
+}
+.dir li.psd {
+	background-image: url('../imgs/psd.png');
+}
+.dir li.video {
+	background-image: url('../imgs/video.png');
+}
+.dir li.audio {
+	background-image: url('../imgs/sound.png');
+}
+.dir li.code {
+	background-image: url('../imgs/code.png');
+}
+.dir li.css {
+	background-image: url('../imgs/css.png');
+}
+.dir li.php {
+	background-image: url('../imgs/php.png');
+}
+.dir li.as {
+	background-image: url('../imgs/as.png');
+}
+.dir li.ruby {
+	background-image: url('../imgs/ruby.png');
+}
+.dir li.web {
+	background-image: url('../imgs/web.png');
+}
+.dir li.pdf {
+	background-image: url('../imgs/pdf.png');
+}
+.dir li.compressed {
+	background-image: url('../imgs/compressed.png');
+}
+.dir li.word {
+	background-image: url('../imgs/word.png');
+}
+.dir li.flash {
+	background-image: url('../imgs/flash.png');
+}
