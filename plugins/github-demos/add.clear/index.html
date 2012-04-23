@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Add Clear jQuery Plugin Demo</title>
+	<meta name="author" content="Stephen Korecky">
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="addclear.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	  $(document).ready(function(){
+	    $("input").addClear();
+	  });
+	</script>
+	<style type="text/css" media="screen">
+	
+	body {
+	  font:normal 12px/1.5 "Helvetica Neue", Helvetica, sans-serif;
+	}
+	
+	 #wrapper {
+	   margin:100px auto 0;
+	   width:300px;
+	 }
+	 
+	 #wrapper h1 {
+	   font-size:18px;
+	 }
+	 
+	 #wrapper #search {
+	   background:#EEE;
+ 	   -moz-border-radius: 5px;
+ 	   -webkit-border-radius: 5px;
+ 	   font-weight:bold;
+ 	   padding:10px;
+ 	 }
+ 	 
+	 #wrapper #search label {
+	   font-weight:bold;
+	   margin:0 5px;
+	 }
+	 
+	 #wrapper #search input {
+	   width:200px;
+	 }
+	 
+	 #wrapper #search span.note {
+	   font-size:10px;
+	   font-weight:normal;
+	 }
+	</style>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Add Clear jQuery Plugin</h1>
+    <p id="search">
+      <label for="search_input">Search</label>
+      <input type="text" name="search" value="" id="search_input">
+      <span class="note">When you type something in this box, the clear button will appear.</span>
+    </p>
+    <p><a href="http://github.com/skorecky/Add-Clear">Github Project Page</a> | <a href="http://twitter.com/skorecky">@skorecky</a></p>
+  </div>
+</body>
+</html>

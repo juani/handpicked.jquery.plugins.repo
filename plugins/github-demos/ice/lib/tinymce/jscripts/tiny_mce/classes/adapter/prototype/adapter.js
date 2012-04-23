@@ -1,0 +1,1 @@
+(function(){if(!window.Prototype){return alert("Load prototype first!")}tinymce.extend(tinymce,{trim:function(s){return s?s.strip():""},inArray:function(a,v){return a&&a.indexOf?a.indexOf(v):-1}});var patches={"tinymce.util.JSON":{},};tinymce.onCreate=function(ty,c,p){tinymce.extend(p,patches[c])}})();

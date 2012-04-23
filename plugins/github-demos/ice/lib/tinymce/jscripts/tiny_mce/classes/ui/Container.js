@@ -1,0 +1,1 @@
+tinymce.create("tinymce.ui.Container:tinymce.ui.Control",{Container:function(id,s,editor){this.parent(id,s,editor);this.controls=[];this.lookup={}},add:function(c){this.lookup[c.id]=c;this.controls.push(c);return c},get:function(n){return this.lookup[n]}});

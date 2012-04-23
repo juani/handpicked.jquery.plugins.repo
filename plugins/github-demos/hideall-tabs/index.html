@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>"Hide All Except One" demo (like tabs)</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="jquery.hideAllExceptOne.js"></script>
+    <script>
+      jQuery(function($){
+        $.hideAllExcept('.tab', '.box');
+      });
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Hide All Except One</span></h1>
+      <ul id="about">
+        <li>Requires jQuery</li>
+        <li>Bookmarkable</li>
+        <li>Unobtrusive</li>
+        <li>Simple markup</li>
+      </ul><br>
+      <h2>Download <a class="code" href="http://github.com/enure/Hide-All-Except-One">jquery.hideAllExceptOne.js</a></h2>
+      <div id="example">
+        <ul id="tabs">
+          <li><a class="tab" href="#breakfast">breakfast</a></li>
+          <li><a class="tab" href="#lunch">lunch</a></li>
+          <li><a class="tab" href="#dinner">dinner</a></li>
+        </ul><br>
+        <div id="boxes">
+          <div id="breakfast" class="box">
+            <h3>Eggs and Toast</h3>
+            <h4>Ingredients</h4>
+            <ul>
+              <li>Eggs</li>
+              <li>Toast</li>
+            </ul><br>
+            <h4>Directions</h4>
+            <ol>
+              <li>Crack eggs</li>
+              <li>Fry on skillet</li>
+              <li>Toast bread. Add butter.</li>
+            </ol><br>
+          </div>
+          <div id="lunch" class="box">
+            <h3>
+              <a href="http://allrecipes.com/Recipe/Delicious-Beef-Tongue-Tacos/Detail.aspx">
+                Delicious Beef Tongue Tacos
+              </a>
+            </h3>
+            <h4>Ingredients</h4>
+            <ul>
+              <li>1 beef tongue</li>
+              <li>1/2 white onion, sliced</li>
+              <li>5 cloves garlic, crushed</li>
+              <li>1 bay leaf</li>
+              <li>salt to taste</li>
+            </ul><br>
+            <ul>
+              <li>3 tablespoons vegetable oil</li>
+              <li>5 Roma tomatoes</li>
+              <li>5 serrano peppers</li>
+              <li>salt to taste</li>
+              <li>1/2 onion, diced</li>
+              <li>2 (10 ounce) packages corn tortillas</li>
+            </ul><br>
+            <h4>Directions</h4>
+            <ol>
+              <li>Place the beef tongue in a slow cooker and cover with water. Add the onion slices, garlic, and bay leaf. Season with salt. Cover and cook on Low overnight or 8 hours. Remove the tongue and shred the meat into strands.</li>
+              <li>Heat the oil in a skillet over medium heat. Cook the tomatoes and peppers in the hot oil until softened on all sides. Remove the tomatoes and peppers in a blender, keeping the oil on the heat; season with salt. Blend briefly until still slightly chunky. Cook the diced onion in the skillet until translucent; stir in the tomato mixture. Cook another 5 to 6 minutes. Build the tacos by placing shredded tongue meat into a tortilla and spooning salsa over the meat.</li>
+            </ol><br>
+          </div>
+          <div id="dinner" class="box">
+            <h3>Black Bean Soup</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      try {
+        var pageTracker = _gat._getTracker("UA-603643-1");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+  </body>
+</html>
