@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="max-age=0">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+<meta http-equiv="Pragma" content="no-cache">
+<title>Minimit Gallery Plugin</title>
+<style type="text/css">
+body {
+	color:#3c3c3c;
+	font-family: sans-serif;
+	font-size:12px;
+	background:#f5f5f5;
+	position:absolute;
+	left:50%;width:540px;margin-left:-270px;
+}
+h1 {
+	font-size:13px;
+	line-height: 24px;
+	margin:60px 10px 10px 10px;
+}
+h2 {
+	font-family: sans-serif;
+	font-size:16px;
+	line-height: 24px;
+	margin:10px 10px 10px 10px;
+}
+a:link, a:visited {
+	text-decoration: none;
+	cursor:pointer;
+	font-family: sans-serif;
+	color:#3c3c3c;
+	border: 1px solid #3c3c3c;
+	border-radius: 15px;
+	background: #fcfcfc;
+	width:36px;
+	height:16px;
+	padding:5px 10px 5px 10px;
+	margin:5px;
+	box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+a:hover, a:active {
+	color:#3c3c3c;
+	background:#92e8ff;
+}
+#example3a>div {
+	display:block;
+	position:relative;
+}
+[id^="example1a-"], [id^="example1b-"], [id^="example101a-"], [id^="example101b-"], [id^="example2-"], [id^="example3a-"], [id^="example3b-"], [id^="example4a-"], [id^="example4b-"], [id^="example9-"], [id^="example10-"], [id^="example11-"], [id^="example12-"], [id^="example13-"], [id^="example14-"], [id^="example15-"] {
+	cursor:pointer;
+	font-family: sans-serif;
+	color:#3c3c3c;
+	border: 1px solid #3c3c3c;
+	border-radius: 15px;
+	background: #fcfcfc;
+	//
+	text-decoration: none;
+	width:450px;
+	height:150px;
+	padding:10px 0px 5px 15px;
+	margin:10px;
+	font-size:20px;
+	box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+[id^="example1b-"], [id^="example101b-"], [id^="example3b-"], #example2-prev, #example2-next, #example9-prev, #example9-next, #example10-prev, #example10-next, [id^="example12-"], [id^="example13-"], [id^="example14-"], [id^="example15-"] {
+	text-decoration: none;
+	display:block;
+	position:relative;
+	float:left;
+	width:36px;
+	height:16px;
+	font-size:12px;
+	padding:5px 0px 5px 10px;
+	margin:5px;
+}
+[id^="example4a-"], [id^="example4b-"] {
+	display:block;
+	position:relative;
+	float:left;
+	width:45px;
+	height:55px;
+}
+[id^="example9-"] {
+	display:block;
+	position:absolute;
+	width:50px;
+	height:50px;
+	border-radius:200px;
+}
+[id^="example10-"], [id^="example11-"] {
+	display:block;
+	position:absolute;
+	width:45px;
+	height:55px;
+}
+[id^="example12-"] {
+	width:500px;
+	height:16px;
+	margin:0px;
+	clear:both;
+	overflow:hidden;
+	margin-top:-1px;
+	border-radius:0px;
+	box-shadow: 2px 3px 0 rgba(0,0,0,0.3);
+}
+[id^="example13-"] {
+	width:440px;
+	height:auto;
+	clear:both;
+	margin:10px;
+	border-radius:0px;
+	box-shadow: 2px 3px 0 rgba(0,0,0,0.3);
+}
+[id^="example14-"], [id^="example15-"] {
+	box-shadow: 2px 3px 0 rgba(0,0,0,0.3);
+}
+[id^="example1a-"], [id^="example101a-"], [id^="example2-"], [id^="example3a-"], [id^="example3b-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last]) {
+	display:block;
+	position:absolute;
+}
+[id^="example2-"], [id^="example3a-"] {
+	margin-left:-150px;
+}
+[id^="example3b-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last]) {
+	margin-left:100px;
+}
+[id^="example1b-"]:hover, [id^="example101b-"]:hover, [id^="example2-"]:hover, [id^="example3a-"]:hover, [id^="example3b-"]:hover, [id^="example4a-"]:hover, [id^="example4b-"]:hover, [id^="example9-"]:hover, [id^="example10-"]:hover, [id^="example11-"]:hover, [id^="example12-"]:hover, [id^="example13-"]:hover, [id^="example14-"]:hover, [id^="example15-"]:hover, [id^="example1b-"].active, [id^="example101b-"].active, [id^="example3b-"].active, [id^="example4a-"].active, [id^="example4b-"].active, [id^="example9-"].active, [id^="example10-"].active, [id^="example11-"].active, [id^="example12-"].active, [id^="example13-"].active, [id^="example14-"].active, [id^="example15-"].active {
+	background: #92e8ff;
+}
+[id^="example1a-"], [id^="example101a-"], [id^="example2-"].active, [id^="example3a-"].active, [id^="example3b-"].active, [id^="example9-"].active, [id^="example10-"].active, [id^="example11-"].active, [id^="example14-"].active, [id^="example15-"].active {
+	cursor: default;
+}
+[id^="example2-"].active, [id^="example3a-"].active {
+	background: #fcfcfc;
+}
+#example3b-prev, #example3b-next {
+	display:block;
+	position:relative;
+	float:left;
+	margin-top:40px;
+	top:10px;
+	left:190px;
+}
+#example2-prev, #example2-next, #example9-prev, #example9-next {
+	top:210px;
+	left:200px;
+}
+#example10-prev, #example10-next {
+	top:250px;
+	left:200px;
+}
+#mycounter {
+	text-decoration: none;
+	display:block;
+	position:relative;
+	float:left;
+	font-size:12px;
+	padding:5px 0px 5px 10px;
+	margin:6px 0px;
+}
+</style>
+
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="../../../jquery.1.7.2.min.js"><\/script>')</script><!-- or <script src="jquery-1.7.min.js" type="text/javascript"></script> -->
+<script src="mg.js" type="text/javascript"></script>
+<script src="jquery.easing.min.js" type="text/javascript"></script>
+<script src="jquery.transform.light.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<img src="mg-logo.png" />
+<h2>Minimit Gallery Demo. Go to the <a href="http://www.minimit.com/works/minimit-gallery-plugin">plugin page</a> for the source code.</h2>
+
+<h1>You can link two or more interactive slides. You can set automatic timing.</h1>
+
+
+<div id="example1a">
+	<div>
+		<div id="example1a-0">0</div>
+		<div id="example1a-1">1</div>
+		<div id="example1a-2">2</div>
+		<div id="example1a-3">3</div>
+		<div id="example1a-4">4</div>
+		<div id="example1a-5">5</div>
+	</div>
+</div>
+<div style="clear:both;height:200px;"></div>
+
+<div id="example1b">
+	<div>
+		<div id="example1b-prev">Prev</div>
+		<div id="example1b-0">0</div>
+		<div id="example1b-1">1</div>
+		<div id="example1b-2">2</div>
+		<div id="example1b-3">3</div>
+		<div id="example1b-4">4</div>
+		<div id="example1b-5">5</div>
+		<div id="example1b-next">Next</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+
+<script type="text/javascript">
+ 
+var reference = "example1a";
+$('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])').css("display","block").css("position","absolute").css("opacity",0).css("z-index","0");
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var mypath=$("#"+reference+"-"+deactivated); 
+	mypath.css("z-index","0");
+	mypath.stop().animate({opacity:0},{queue:true, duration:1600, specialEasing: {opacity: 'easeOutExpo'}});
+	var mypath=$("#"+reference+"-"+activated);
+	mypath.css("z-index","2").css("opacity",0);
+	mypath.stop().animate({opacity:1},{queue:true, duration:1600, specialEasing: {opacity: 'easeOutExpo'}});
+}
+
+mg_init({
+	reference:"example1a",
+	activated:[0],
+	click:{
+		max_activated:1
+	}
+});
+
+//
+
+var reference = "example1b";
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+}
+
+mg_init({
+	reference:"example1b",
+	activated:[0],
+	click:{
+		interactive:true,
+		linked:["example1a"],
+		max_activated:1,
+		automatic:1000,	automaticpause:5000
+	},
+	interaction:{
+		cycle:true
+	}
+});
+
+</script>
+
+
+<h1>You can have also first and last buttons, show and hide functions for buttons.</h1>
+
+<div id="example101a">
+	<div>
+		<div id="example101a-0">0</div>
+		<div id="example101a-1">1</div>
+		<div id="example101a-2">2</div>
+		<div id="example101a-3">3</div>
+	</div>
+</div>
+<div style="clear:both;height:200px;"></div>
+
+<div id="example101b">
+	<div>
+		<div id="example101b-first">First</div>
+		<div id="example101b-prev">Prev</div>
+		<div id="example101b-0">0</div>
+		<div id="example101b-1">1</div>
+		<div id="example101b-2">2</div>
+		<div id="example101b-3">3</div>
+		<div id="example101b-next">Next</div>
+		<div id="example101b-last">Last</div>
+		<div id="mycounter">Page X of X</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+
+<script type="text/javascript">
+
+var reference = "example101a";
+$('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])').css("display","block").css("position","absolute").css("opacity",0).css("z-index","0");
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var mypath=$("#"+reference+"-"+deactivated); 
+	mypath.css("z-index","0");
+	mypath.stop().animate({opacity:0},{queue:true, duration:1600, specialEasing: {opacity: 'easeOutExpo'}});
+	var mypath=$("#"+reference+"-"+activated);
+	mypath.css("z-index","2").css("opacity",0);
+	mypath.stop().animate({opacity:1},{queue:true, duration:1600, specialEasing: {opacity: 'easeOutExpo'}});
+	// set counter numbers
+	$("#mycounter").html("Page "+(parseFloat(activated)+1)+" of "+$('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])').length);
+}
+
+mg_init({
+	reference:"example101a",
+	activated:[0],
+	click:{
+		max_activated:1
+	}
+});
+
+//
+
+var reference = "example101b";
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+}
+this[reference+"_prevhide"] = function(reference, prevsteps){
+	$("#"+reference+"-prev").css("visibility","hidden");
+	$("#"+reference+"-first").css("visibility","hidden");
+}
+this[reference+"_prevshow"] = function(reference, prevsteps){
+	$("#"+reference+"-prev").css("visibility","visible");
+	$("#"+reference+"-first").css("visibility","visible");
+}
+this[reference+"_nexthide"] = function(reference, nextsteps){
+	$("#"+reference+"-next").css("visibility","hidden");
+	$("#"+reference+"-last").css("visibility","hidden");
+}
+this[reference+"_nextshow"] = function(reference, nextsteps){
+	$("#"+reference+"-next").css("visibility","visible");
+	$("#"+reference+"-last").css("visibility","visible");
+}
+
+mg_init({
+	reference:"example101b",
+	activated:[0],
+	click:{
+		interactive:true,
+		linked:["example101a"],
+		max_activated:1,
+		less:2, plus:2
+	}
+});
+
+</script>
+
+
+<h1>For multiple items use "multiple.array" variable and "mapDistance" function.<br/>Example with also "prevtosteps" and "nexttosteps" set to true.</h1>
+
+<div id="example2">
+		<div id="example2-0">0</div>
+		<div id="example2-1">1</div>
+		<div id="example2-2">2</div>
+		<div id="example2-3">3</div>
+		<div id="example2-4">4</div>
+		<div id="example2-5">5</div>
+		<div style="clear:both;"></div>
+		<div id="example2-prev">Prev</div>
+		<div id="example2-next">Next</div>
+	</div>
+</div>
+<div style="clear:both;height:180px;"></div>
+
+<script type="text/javascript">
+
+var reference = "example2";
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+	$('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])').css("display","none");
+	//
+	var arr = multiple.activated;
+	for(var i=0;i<arr.length;i++){
+		var depth = Math.abs(mg_mapDistanceReverse(multiple.plus, i, arr.length, 0)); // Parameters: center, num, max, min
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.css("position","absolute").css("z-index",depth);
+		mypath.css("display","block").css("position","absolute").css("left",(i*80)+"px");
+	}
+}
+
+mg_init({
+	reference:"example2",
+	activated:[-1],
+	click:{
+		interactive:true,
+		max_activated:1,
+		less:2, plus:2
+	},
+	interaction:{
+		prevtosteps:true, nexttosteps:true
+	}
+});
+</script>
+
+
+<h1>For advanced multiple items animations use the others "multiple" variables.</h1>
+
+<div id="example3a">
+	<div style="top:-50px;">
+		<div id="example3a-0">0</div>
+		<div id="example3a-1">1</div>
+		<div id="example3a-2">2</div>
+		<div id="example3a-3">3</div>
+		<div id="example3a-4">4</div>
+		<div id="example3a-5">5</div>
+		<div id="example3a-6">6</div>
+	</div>
+</div>
+<div style="clear:both;height:200px;"></div>
+<div id="example3b">
+	<div>
+		<div id="example3b-0">0</div>
+		<div id="example3b-1">1</div>
+		<div id="example3b-2">2</div>
+		<div id="example3b-3">3</div>
+		<div id="example3b-4">4</div>
+		<div id="example3b-5">5</div>
+		<div id="example3b-6">6</div>
+		<div id="example3b-prev">Prev</div>
+		<div id="example3b-next">Next</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+
+<script type="text/javascript">
+
+var reference = "example3a";
+$('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])').css("display","block").css("position","absolute").css("opacity",0).css("display","none");
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+	var pause = 200;
+	//
+	var arr = multiple.before_out;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.stop().delay(i*pause).animate({top:120, left:-160,opacity:0, width:0, height:0},{queue:true, duration:1200, specialEasing: {top:'easeOutExpo', left:'easeOutExpo', opacity:'easeOutExpo', width:'easeOutExpo', height:'easeOutExpo'}, complete:function(){$(this).css("display","none");}});
+	}
+	var arr = multiple.after_out;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.stop().delay(i*pause).animate({top:120, left:450*2,opacity:0, width:0, height:0},{queue:true, duration:1200, specialEasing: {top:'easeOutExpo', left:'easeOutExpo', opacity:'easeOutExpo', width:'easeOutExpo', height:'easeOutExpo'}, complete:function(){$(this).css("display","none");}}); // *2 cause of resizing
+	}
+	var arr = multiple.before_in;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.stop().css("left",-160).css("display","block").css("opacity",0).css("width",0).css("height",0).css("top",120);
+	}
+	var arr = multiple.after_in;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.stop().css("left",450*2).css("display","block").css("opacity",0).css("width",0).css("height",0).css("top",120); // *2 cause of resizing
+	}
+	var arr = multiple.activated; // the current items
+	for(var i=0;i<arr.length;i++){
+		var depth = Math.abs(mg_mapDistanceReverse(multiple.plus, i, arr.length, 0));
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.css("display","block");
+		if(multiple.direction){mypath.stop().delay((i+multiple.jumped)*pause);}else{mypath.stop().delay((multiple.plus*2-(i+multiple.jumped))*pause);} // gives delay
+		if(i>arr.length/2){var widthchange=450-(depth+3)*90;}else{var widthchange=0;} // width and height changes cause of resizing
+		mypath.animate({top:150-(depth+3)*20,left:i*80+widthchange, opacity:1, width:(depth+3)*90, height:(depth+3)*30},{queue:true, duration:1200, specialEasing: {top:'easeOutExpo', left:'easeOutExpo', opacity:'easeOutExpo', width:'easeOutExpo', height:'easeOutExpo'}});
+		if($.browser.msie && $.browser.version<9){
+			mypath.css("z-index",depth);
+		}else{
+			mypath.animate({zIndex:depth},{queue:false, duration:600+Math.abs(multiple.jumped*100), specialEasing: {zIndex:'easeOutExpo'}}); // duration half of the animate to have a nice swap
+		}
+		if(deactivated==undefined){mypath.css("z-index", depth)}; // this is the first call where deactivated is undefined
+	}
+}
+
+mg_init({
+	reference:"example3a",
+	activated:[0],
+	click:{
+		interactive:true,
+		linked:["example3b"],
+		max_activated:1,
+		less:2, plus:2
+	},
+	interaction:{
+		cycle:true
+	}
+});
+
+//
+
+var reference = "example3b";
+$('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])').css("display","block").css("position","absolute").css("opacity",0).css("display","none");
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+	var pause = 200;
+	//
+	var arr = multiple.before_out;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.stop().delay(i*pause).animate({left:-160,opacity:0},{queue:true, duration:1200, specialEasing: {left:'easeOutExpo', opacity:'easeOutExpo'}, complete:function(){$(this).css("display","none");}});
+	}
+	var arr = multiple.after_out;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.stop().delay(i*pause).animate({left:450,opacity:0},{queue:true, duration:1200, specialEasing: {left:'easeOutExpo', opacity:'easeOutExpo'}, complete:function(){$(this).css("display","none");}});
+	}
+	var arr = multiple.before_in;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.stop().css("left",-160).css("display","block").css("opacity",0);
+	}
+	var arr = multiple.after_in;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.stop().css("left",450).css("display","block").css("opacity",0);
+	}
+	var arr = multiple.activated;
+	for(var i=0;i<arr.length;i++){
+		var depth = Math.abs(mg_mapDistance(multiple.plus, i)); // Parameters: center, num
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.css("z-index", depth).css("display","block");
+		if(multiple.direction){mypath.stop().delay((i+multiple.jumped)*pause);}else{mypath.stop().delay((multiple.plus*2-(i+multiple.jumped))*pause);}
+		mypath.animate({left:i*60, opacity:1, width:36*(depth/5+1), height:16*(depth/5+1), fontSize:12*(depth/5+1)},{queue:true, duration:1200, specialEasing: {left: 'easeOutExpo', opacity: 'easeOutExpo', width: 'easeOutExpo', height: 'easeOutExpo', fontSize: 'easeOutExpo'}});
+	}
+}
+
+mg_init({
+	reference:"example3b",
+	activated:[0],
+	click:{
+		interactive:true,
+		linked:["example3a"],
+		max_activated:1,
+		less:2, plus:2
+	},
+	interaction:{
+		cycle:true
+	}
+});
+
+</script>
+
+
+<h1>For multiple active states use "activated" and "deactivated" variables as arrays.</h1>
+
+<div id="example4a">
+	<div>
+		<div id="example4a-0">0</div>
+		<div id="example4a-1">1</div>
+		<div id="example4a-2">2</div>
+		<div id="example4a-3">3</div>
+		<div id="example4a-4">4</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+<div id="example4b">
+	<div>
+		<div id="example4b-0">0</div>
+		<div id="example4b-1">1</div>
+		<div id="example4b-2">2</div>
+		<div id="example4b-3">3</div>
+		<div id="example4b-4">4</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+
+<script type="text/javascript">
+
+this["example4a_click"] = this["example4b_click"] = this["example4a_init"] = this["example4b_init"] =  function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var mypath=$("#"+reference+"-"+deactivated);
+	mypath.removeClass("active");
+	mypath.stop().animate({top:'0'},{queue:true, duration:300, specialEasing: {top: 'easeOutExpo'}});
+	//
+	for(var i=0;i<activated.length;i++){ // the activated variable hold the selected items based on max_activated
+		var mypath=$("#"+reference+"-"+activated[i]);
+		mypath.addClass("active");
+		mypath.stop().animate({top:'-10'},{queue:true, duration:300, specialEasing: {top: 'easeOutExpo'}});
+	}
+}
+
+mg_init({
+	reference:"example4a",
+	activated:[3,0,1],
+	click:{
+		interactive:true,
+		linked:["example4b"],
+		max_activated:3,
+		deactivable:true
+	},
+	interaction:{
+		cycle:true
+	}
+});
+
+mg_init({
+	reference:"example4b",
+	activated:[3,0,1],
+	click:{
+		interactive:true,
+		linked:["example4a"],
+		max_activated:3,
+		deactivable:true
+	},
+	interaction:{
+		cycle:true
+	}
+});
+
+</script>
+
+
+<h1>And about the design implementations ...</h1>
+
+<div id="example9">
+	<div style="display:block;position:relative;">
+		<div id="example9-0">0</div>
+		<div id="example9-1">1</div>
+		<div id="example9-2">2</div>
+		<div id="example9-3">3</div>
+		<div id="example9-4">4</div>
+		<div id="example9-5">5</div>
+		<div id="example9-6">6</div>
+		<div id="example9-7">7</div>
+		<div id="example9-8">8</div>
+		<div id="example9-9">9</div>
+		<div id="example9-10">10</div>
+		<div id="example9-11">11</div>
+		<div id="example9-12">12</div>
+		<div id="example9-13">13</div>
+		<div style="clear:both;"></div>
+		<div id="example9-prev">Prev</div>
+		<div id="example9-next">Next</div>
+	</div>
+</div>
+<div style="clear:both;height:200px;"></div>
+
+<script type="text/javascript">
+
+var reference = "example9";
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+	var arr = multiple.activated;
+	var alpha = Math.PI*2/(arr.length-1);
+	var xradius = 200;
+	var yradius = 60;
+	for (var i=0;i<arr.length-1;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		var middle = Math.floor(arr.length/2);
+		//
+		if(arr[i]==activated || i==middle){
+			var depth = 0;
+		} else {
+			var depth = mg_mapDistanceReverse(multiple.plus, i, arr.length, 0);
+		}
+		//
+		var theta = alpha*(activated-arr[i]-depth/6)+1.6; // -depth/6 will give additional distance based on depth: it gives space for activated
+		var x = 20+xradius+Math.cos(theta)*xradius;
+		var y = yradius+Math.sin(theta)*yradius;
+		var w = h = y/4;
+		var scale = 0.2+y/140;
+		mypath.stop().css("z-index", Math.round(y/10));
+		if(arr[i]==activated){
+			w = 200;
+			h = 100;
+			x -= 75;
+			y -= 50;
+			scale = 1;
+			mypath.css("border-radius", 20)
+		} else if(arr[i]==deactivated){
+			mypath.css("border-radius", 100)
+			w = 50;
+			h = 50;
+		} else {
+			w = 50;
+			h = 50;
+		}
+		mypath.animate({width:w, height:h},{queue:false, duration:1300, specialEasing: { width:'easeOutExpo', height:'easeOutExpo'}});
+		mypath.animate({marginLeft:x, marginTop:y, transform: 'scaleX('+scale+') scaleY('+scale+')'},{queue:true, duration:1300, specialEasing: {marginLeft:'easeOutExpo', marginTop:'easeOutExpo', transform:'easeOutExpo'}});
+	}
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active").css("z-index",100);
+}
+
+mg_init({
+	reference:"example9",
+	activated:[0],
+	click:{
+		interactive:true,
+		max_activated:1,
+		less:7, plus:7
+	},
+	interaction:{
+		cycle:true
+	}
+});
+
+
+</script>
+
+
+<h1>... endless possibilities ...</h1>
+
+<div id="example10">
+	<div style="display:block;position:relative;">
+		<div id="example10-0">0</div>
+		<div id="example10-1">1</div>
+		<div id="example10-2">2</div>
+		<div id="example10-3">3</div>
+		<div id="example10-4">4</div>
+		<div id="example10-5">5</div>
+		<div id="example10-6">6</div>
+		<div id="example10-7">7</div>
+		<div id="example10-8">8</div>
+		<div id="example10-9">9</div>
+		<div style="clear:both;"></div>
+		<div id="example10-prev">Prev</div>
+		<div id="example10-next">Next</div>
+	</div>
+</div>
+<div style="clear:both;height:250px;"></div>
+
+<script type="text/javascript">
+
+var reference = "example10";
+$('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])').css("opacity",0).css("display","none");
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+	var xspace = 30;
+	var yspace = 30;
+	//
+	var arr = multiple.before_out;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		var t = -(arr.length-i)-1;
+		var x = 200-(multiple.activated.length/2+t)*xspace;
+		var y = 50+(multiple.activated.length/2-t)*yspace;
+		mypath.stop().css("z-index", -i-1);
+		mypath.animate({top:y,left:x,opacity:0},{queue:true, duration:1200, specialEasing: {top:'easeOutExpo', left:'easeOutExpo', opacity:'easeOutExpo'}, complete:function(){$(this).css("display","none");}});
+	}
+	var arr = multiple.after_out;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		var t = (multiple.activated.length-i)+1;
+		var x = 200-(multiple.activated.length/2+t)*xspace;
+		var y = 50+(multiple.activated.length/2-t)*yspace;
+		mypath.stop().css("z-index", -i-1);
+		mypath.animate({top:y,left:x,opacity:0},{queue:true, duration:1200, specialEasing: {top:'easeOutExpo', left:'easeOutExpo', opacity:'easeOutExpo'}, complete:function(){$(this).css("display","none");}});
+	}
+	var arr = multiple.before_in;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		var t = -i-1;
+		var x = 200-(multiple.activated.length/2+t)*xspace;
+		var y = 50+(multiple.activated.length/2-t)*yspace;
+		mypath.stop().css("top",y).css("left",x).css("display","block").css("opacity",0);
+	}
+	var arr = multiple.after_in;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		var t = (multiple.activated.length-arr.length+i)+multiple.jumped;
+		var x = 200-(multiple.activated.length/2+t)*xspace;
+		var y = 50+(multiple.activated.length/2-t)*yspace;
+		mypath.stop().css("top",y).css("left",x).css("display","block").css("opacity",0);
+	}
+	var arr = multiple.activated;
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+arr[i]);
+		if(i>arr.length/2){var t = i-1;}else{var t = i;} // remove activated space
+		var x = 200-(arr.length/2+t)*xspace;
+		var y = 50+(arr.length/2-t)*yspace;
+		mypath.css("display","block").css("z-index", arr.length-i);
+		mypath.animate({top:y, left:x, opacity:1},{queue:false, duration:1200, specialEasing: {top:'easeOutExpo', left:'easeOutExpo', opacity:'easeOutExpo'}});
+	}
+	var mypath = $("#"+reference+"-"+deactivated);
+	mypath.animate({width:40, height:50},{queue:false, duration:1200, specialEasing: {width:'easeOutExpo', height:'easeOutExpo'}});
+	var mypath = $("#"+reference+"-"+activated);
+	mypath.stop().animate({top:0, left:200, opacity:1, width:160, height:200},{queue:true, duration:1200, specialEasing: {top:'easeOutExpo', left:'easeOutExpo', opacity:'easeOutExpo', width:'easeOutExpo', height:'easeOutExpo'}});
+}
+
+mg_init({
+	reference:"example10",
+	activated:[3],
+	click:{
+		interactive:true,
+		max_activated:1,
+		less:3, plus:3
+	}
+});
+
+</script>
+
+
+<h1>... you can build nice menus ...</h1>
+
+<div id="example11">
+	<div>
+		<div id="example11-0">0</div>
+		<div id="example11-1">1</div>
+		<div id="example11-2">2</div>
+		<div id="example11-3">3</div>
+		<div id="example11-4">4</div>
+		<div id="example11-5">5</div>
+		<div id="example11-6">6</div>
+		<div id="example11-7">7</div>
+		<div id="example11-8">8</div>
+	</div>
+</div>
+<div style="clear:both;height:80px;"></div>
+
+<script type="text/javascript">
+
+var reference = "example11";
+
+this[reference+"_init"] =  function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){ // on init
+	var arr = $('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])');
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+i);
+		mypath.css("left",(i*60));
+	}
+}
+
+this[reference+"_hover"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){ // on mouse hover
+	var arr = multiple.activated;
+	for(var i=0;i<arr.length;i++){
+		var depth = Math.abs(mg_mapDistanceReverse(multiple.plus, i, arr.length, 0));
+		var scale = 1+depth/6;
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.css("z-index",depth);
+		mypath.stop().animate({transform:'scaleX('+scale+') scaleY('+scale+')'},{queue:true, duration:400, specialEasing: {transform:'easeOutExpo'}});
+		mypath.animate({marginTop:10},{queue:false, duration:400, specialEasing: {marginTop:'easeOutExpo'}});
+	}
+}
+
+this[reference+"_out"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){ // on mouse out
+	var arr = multiple.activated;
+	for(var i=0;i<arr.length;i++){
+		var scale = 1;
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.css("z-index", i);
+		mypath.stop().animate({transform:'scaleX('+scale+') scaleY('+scale+')'},{queue:true, duration:400, specialEasing: {transform:'easeOutExpo'}});
+		mypath.animate({marginTop:10},{queue:false, duration:400, specialEasing: {marginTop:'easeOutExpo'}});
+	}
+}
+
+this[reference+"_click"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){ // on mouse click
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+	var mypath = $("#"+reference+"-"+activated);
+	mypath.animate({marginTop:-40},{queue:true, duration:100, specialEasing: {marginTop:'easeOutExpo'}});
+	mypath.animate({marginTop:10},{queue:true, duration:600, specialEasing: {marginTop:'easeOutBounce'}});
+}
+
+mg_init({
+	reference:"example11",
+	click:{
+		interactive:true,
+		max_activated:1,
+		deactivable:false,
+		less:2, plus:2
+	},
+	hover:{
+		interactive:true,
+		max_activated:1,
+		less:2,	plus:2
+	},
+	out:{
+		interactive:true,
+		max_activated:1,
+		less:2, plus:2
+	}
+});
+
+</script>
+
+
+<h1>... dropdowns and selectable lists ...</h1>
+
+<div id="example12 example13">
+	<div>
+		<div id="example12-0"><div style="display:block;position:relative;">0</div>
+			<div id="example13-0">0</div><div id="example13-1">1</div><div id="example13-2">2</div><div id="example13-3">3</div>
+		</div>
+		<div id="example12-1"><div style="display:block;position:relative;">1</div>
+			<div id="example13-4">4</div><div id="example13-5">5</div><div id="example13-6">6</div><div id="example13-7">7</div>
+		</div>
+		<div id="example12-2"><div style="display:block;position:relative;">2</div>
+			<div id="example13-8">8</div><div id="example13-9">9</div>
+		</div>
+		<div id="example12-3"><div style="display:block;position:relative;">3</div>
+			<div id="example13-10">10</div><div id="example13-11">11</div>
+		</div>
+		<div id="example12-4"><div style="display:block;position:relative;">4</div>
+			<div id="example13-12">12</div>
+		</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
+<div id="example13output" style="margin:10px;"></div>
+
+
+<script type="text/javascript">
+
+var reference = "example12";
+
+this[reference+"_click"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	for(var i=0;i<activated.length;i++){
+		var mypath=$("#"+reference+"-"+activated[i]);
+		mypath.addClass("active");
+	}
+	//
+	var last_activated = reference+"-"+activated[0];
+	var mypath = $('[id^="'+last_activated+'"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])');
+	var mypath2 = $('[id^="'+last_activated+'"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])').children();
+	var h = (mypath2.length)*48-20;
+	mypath.stop().animate({height:h},{queue:true, duration:400, specialEasing: {height:'easeOutExpo'}});
+	//
+	var last_activated = reference+"-"+deactivated;
+	var mypath = $('[id^="'+last_activated+'"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])');
+	var h = 16;
+	mypath.stop().animate({height:h},{queue:true, duration:400, specialEasing: {height:'easeOutExpo'}});
+}
+
+mg_init({
+	reference:"example12",
+	click:{
+		interactive:true,
+		deactivable:true,
+		less:2, plus:2
+	}
+});
+
+//
+
+var reference = "example13";
+$('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])').css("left",10);
+
+this[reference+"_click"] = this[reference+"_init"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var sel = "Selected: "; // output
+	for(var i=0;i<activated.length;i++){
+		var mypath=$("#"+reference+"-"+activated[i]);
+		mypath.addClass("active");
+		sel+=activated[i]+" "; // output
+	}
+	if(activated.length==0){sel+="Nothing";} // output
+	$("#example13output").text(sel); // output
+	$("#"+reference+"-"+deactivated).removeClass("active");
+}
+
+mg_init({
+	reference:"example13",
+	click:{
+		interactive:true,
+		deactivable:true,
+		less:2, plus:2
+	}
+});
+
+</script>
+
+
+<h1>... fancy buttons and lists ...</h1>
+
+<div id="example14">
+	<div style="display:block;position:relative;">
+		<div id="example14-0">0</div>
+		<div id="example14-1">1</div>
+		<div id="example14-2">2</div>
+		<div id="example14-3">3</div>
+		<div id="example14-4">4</div>
+		<div id="example14-5">5</div>
+		<div id="example14-6">6</div>
+		<div id="example14-7">7</div>
+		<div id="example14-8">8</div>
+	</div>
+</div>
+<div id="example15">
+	<div style="display:block;position:relative;margin-left:200px;">
+		<div id="example15-0">0</div>
+		<div id="example15-1">1</div>
+		<div id="example15-2">2</div>
+		<div id="example15-3">3</div>
+		<div id="example15-4">4</div>
+		<div id="example15-5">5</div>
+		<div id="example15-6">6</div>
+		<div id="example15-7">7</div>
+		<div id="example15-8">8</div>
+	</div>
+</div>
+<div style="clear:both;height:250px;"></div>
+
+<script type="text/javascript">
+
+var reference = "example14";
+
+this[reference+"_init"] =  function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var arr = $('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])');
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+i);
+		mypath.css("top",(i*28)).css("position", "absolute").css("width", 100);
+	}
+}
+
+this[reference+"_hover"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var arr = multiple.activated;
+	for(var i=0;i<arr.length;i++){
+		var depth = mg_mapDistance(multiple.plus, i, arr.length, 0);
+		var depth2 = mg_mapDistanceReverse(multiple.plus, i, arr.length, 0);
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.css("z-index",Math.abs(depth2)+multiple.plus);
+		mypath.stop().animate({transform:'rotate('+(-depth*6)+'deg)'},{queue:true, duration:400, specialEasing: {transform:'easeOutExpo'}});
+		mypath.animate({marginTop:depth*2},{queue:false, duration:400, specialEasing: {marginTop:'easeOutExpo'}});
+		if(arr[i]==activated){
+			mypath.animate({marginLeft:-10},{queue:false, duration:400, specialEasing: {marginLeft:'easeOutExpo'}});
+		}else{
+			mypath.animate({marginLeft:0},{queue:false, duration:400, specialEasing: {marginLeft:'easeOutExpo'}});
+		}
+	}
+}
+
+this[reference+"_out"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var arr = multiple.activated;
+	for(var i=0;i<arr.length;i++){
+		var rotation = 0;
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.css("z-index", i);
+		mypath.stop().animate({transform:'rotate('+rotation+'deg)'},{queue:true, duration:400, specialEasing: {transform:'easeOutExpo'}});
+		mypath.animate({marginTop:0},{queue:false, duration:400, specialEasing: {marginTop:'easeOutExpo'}});
+		mypath.animate({marginLeft:0},{queue:false, duration:400, specialEasing: {marginLeft:'easeOutExpo'}});
+	}
+}
+
+this[reference+"_click"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+}
+
+mg_init({
+	reference:"example14",
+	click:{
+		interactive:true,
+		max_activated:1,
+		less:8,	plus:8
+	},
+	hover:{
+		interactive:true,
+		max_activated:1,
+		less:8,	plus:8
+	},
+	out:{
+		interactive:true,
+		max_activated:1,
+		less:8,	plus:8
+	}
+});
+
+//
+
+var reference = "example15";
+
+this[reference+"_init"] =  function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var arr = $('[id^="'+reference+'-"]:not([id*=prev]):not([id*=next]):not([id*=first]):not([id*=last])');
+	for(var i=0;i<arr.length;i++){
+		var mypath = $("#"+reference+"-"+i);
+		mypath.css("top",(i*28)).css("position", "absolute").css("width", 100);
+	}
+}
+
+this[reference+"_hover"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var arr = multiple.activated;
+	for(var i=0;i<arr.length;i++){
+		var depth = Math.abs(mg_mapDistanceReverse(multiple.plus, i, arr.length, 0));
+		var scale = 1+depth/10;
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.css("z-index",depth);
+		mypath.stop().animate({transform:'scaleX('+scale+') scaleY('+scale+')'},{queue:true, duration:400, specialEasing: {transform:'easeOutExpo'}});
+	}
+}
+
+this[reference+"_out"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	var arr = multiple.activated;
+	for(var i=0;i<arr.length;i++){
+		var scale = 1;
+		var mypath = $("#"+reference+"-"+arr[i]);
+		mypath.css("z-index", i);
+		mypath.stop().animate({transform:'scaleX('+scale+') scaleY('+scale+')'},{queue:true, duration:400, specialEasing: {transform:'easeOutExpo'}});
+	}
+}
+
+this[reference+"_click"] = function(reference, activated, deactivated, prevsteps, nextsteps, multiple, cycle){
+	$("#"+reference+"-"+deactivated).removeClass("active");
+	$("#"+reference+"-"+activated).addClass("active");
+}
+
+mg_init({
+	reference:"example15",
+	click:{
+		interactive:true,
+		max_activated:1,
+		deactivable:false,
+		less:3, plus:3
+	},
+	hover:{
+		interactive:true,
+		max_activated:1,
+		deactivable:false,
+		less:3, plus:3
+	},
+	out:{
+		interactive:true,
+		max_activated:1,
+		deactivable:false,
+		less:3, plus:3
+	}
+});
+
+</script>
+
+
+<h1>... and many more.</h1>
+
+<h2></h2>
+
+</body>
+</html>

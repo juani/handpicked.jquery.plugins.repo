@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pie Menu (like Path Menu) using jquery and CSS3 by Nikesh Hayaran</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/piemenu.css">
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="../../../jquery.1.7.2.min.js"><\/script>')</script>
+
+		<script src="js/jquery.menu.js"></script>
+		<script src="js/jquery-ui-1.8.20.custom.min.js"></script>
+	</head>
+	<body>
+		<div class='content'>
+			<h2>Pie Menu (like Path menu ) using jquery and CSS3 </h2>
+			
+			<div class='demo-container'>
+				<div class='input-form'>
+					
+					<form class="form-horizontal">
+					  <fieldset>
+						
+						<div class="control-group">
+						  <label class="control-label" for="s_angle">Start Angle</label>
+						  <div class="controls">
+							<div class='input-append'>
+								<input type="text" class="input-small" id='s_angle' required  placeholder="Enter a Angle"  pattern="[0-9]*" value='0'>
+								<span class="add-on">deg</span>
+							</div>
+						  </div>
+						</div>
+						
+						<div class="control-group">
+						  <label class="control-label" for="diff_angle">Displacement Angle</label>
+						  <div class="controls">
+							<div class='input-append'>
+								<input type="text" class="input-small" id='diff_angle' required  placeholder="Enter a Angle"  pattern="[0-9]*" value='90'>
+								<span class="add-on">deg</span>
+							</div>
+						  </div>
+						</div>
+						
+						<div class="control-group">
+						  <label class="control-label" for="radius">Radius Of Circle</label>
+						  <div class="controls">
+							<div class='input-append'>
+								<input type="text" class="input-small" id='radius' required  placeholder="Enter a Radius"  pattern="[0-9]*" value='100'>
+								<span class="add-on">deg</span>
+							</div>
+						  </div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<div class="btn" class='btn btn-small ' id='submit_button'><i class="icon-refresh"></i> Refresh</a></div>
+							 </div>
+						</div>
+					  </fieldset>
+					</form>
+				</div>
+				
+				<div class='demo'>
+					<p id='info'>Updated..</p>
+					<div id='outer_container' class="outer_container" >
+						<a class="menu_button" href="#" title="Toggle"><span>Menu Toggle</span></a>
+						<ul class="menu_option">
+						  <li><a href="#"><span>Item</span></a></li>
+						  <li><a href="#"><span>Item</span></a></li>
+						  <li><a href="#"><span>Item</span></a></li>
+						  <li><a href="#"><span>Item</span></a></li>
+						  <li><a href="#"><span>Item</span></a></li>
+						</ul>
+					</div>				
+				</div>
+				<div class='drag'>* Draggable Element</div>
+				<div class='clearfix'></div>
+			</div>
+			<h5>* Please read README.md file for explanation.</h5>
+		</div>
+		<script>
+		function PieMenuInit(){		
+			$('#outer_container').PieMenu({
+				'starting_angel':$('#s_angle').val(),
+				'angel_difference' : $('#diff_angle').val(),
+				'radius':$('#radius').val(),
+			});			
+		}
+		$(function() {          
+			$("#submit_button").click(function() {reset(); }); 
+			$( "#outer_container" ).draggable();
+			PieMenuInit();
+			
+		});
+		function reset(){
+			if($(".menu_button").hasClass('btn-rotate'))
+			$(".menu_button").trigger('click');
+			
+			$("#info").fadeIn("slow").fadeOut("slow");
+			PieMenuInit();
+		}
+		</script>
+
+	</body>
+</html>
