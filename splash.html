@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>The Handpicked jQuery Plugins Repository</title>
-<meta name="description" content="The Handpicked jQuery Plugins Repository">
-<meta name="author" content="The Handpicked jQuery Plugins Repository">
-<meta name="keywords" content="The Handpicked jQuery Plugins Repository" />
+<title>The Handpicked jQuery Plugins Repository. Supercharge your website! A handpicked collection of jQuery plugins.</title>
+
+<meta name="description" content="The Handpicked jQuery Plugins Repository. A handpicked collection of jQuery plugins.">
+<meta name="author" content="David Higgins">
+<meta name="keywords" content="jquery,plugins,handpicked,jquery-plugins,plugins-jquery,plugin-collection,collection,best,best-plugins,good-jquery-plugins,jQuery,jquery-handpicked,david-higgins,higgins" />
 <meta name="robots" content="index,follow" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII="/>
-<link rel="humans" href="http://iwantaneff.in/humans.txt" />
-<link rel="image_src" href="http://iwantaneff.in/facebook.png" />
+<link rel="humans" href="http://js.eire-media.com/humans.txt" />
+<link rel="image_src" href="http://iwantaneff.in/repo/img/header.png" />
+
 <meta property="og:title" content="The Handpicked jQuery Plugins Repository" />
 <meta property="og:url" content="http://iwantaneff.in/repo/" />
-<meta property="og:image" content="http://iwantaneff.in/facebook.png" />
+<meta property="og:image" content="http://js.eire-media.com/favicon.png" />
 <meta property="og:site_name" content="The Handpicked jQuery Plugins Repository" />
 
-<link rel="stylesheet" href="css.css" type="text/css"/>
 <style>::-moz-selection{ background: #000; color: white; text-shadow: none; }::selection { background:#000; color:white; text-shadow: none; }</style>
 <style>
 * {
@@ -26,129 +28,223 @@
     text-decoration: none;
     padding: 0;
     margin: 0;
-    list-style-type: none;
-    font-family: Verdana, Arial, Helvetica
-}
-.overlay{
-position:absolute;
-top:0px;
-left:0px;
-width:100%;
-height:100%;
-background:url(x.png);
-z-index:-10
-}
-.h {
-	font-weight: 900;
-	display: inline-block;
-	margin-bottom: 30px;
-	line-height: 1;
-	
-	font-family: 'Lobster';
-	text-shadow: #abd8e8 .01em .01em 0,
-			#abd8e8 .02em .02em 0,
-			#abd8e8 .03em .03em 0,
-			#abd8e8 .04em .04em 0,
-			#abd8e8 .05em .05em 0,
-			#abd8e8 .06em .06em 0,
-			#abd8e8 .07em .07em 0,			
-			#abd8e8 .08em .08em 0,
-			#abd8e8 .09em .09em 0,
-			#abd8e8 .1em .1em 0;
-			
-}
-.a{
-color:#ff002a;
-width: 100%;
-z-index: 900000
-}
-.b{
-color:#fff;
-width: 60%;
-z-index: 900000
-}
-.social{
-position:fixed;
-bottom:4px;
-right: 4px;
-}
-body{
-padding-right: 90px;
-}
-.sc{
-text-align:center;
 }
 </style>
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 <link href="http://iwantaneff.in/custom.webkit.scrollbar.css" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<style>
+body {
+background: url(img/wood.png);
+color: #black;
+font-family: Jura;
+font-size: 26px;
+}
+header{
+font-family: 'Fredoka One', cursive;
+font-size:90px;
+color: #3f3f3f;
+margin-top: 30px;
+margin-bottom: 30px;
+
+}
+header span{
+font-size:45px;
+}
+h1,
+h2 {
+    color: #ff7c7c;
+    text-shadow: 0 -3px #ffdede;
+    font-weight: normal;
+    background: #fff;
+    padding: 20px;
+}
+.wrapper {
+    max-width: 600px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.wrapper li {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.wrapper p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#shareme {
+    width: 350px;
+    height: 60px;
+
+    
+}
+#shareme .box {
+    float: left;
+    margin: 5% 8% 0 8%;
+    width: 100%;
+}
+#shareme .box a { color: #404040 }
+#shareme .box a:hover { text-decoration: none }
+#shareme .count {
+    font-weight: bold;
+    font-size: 20px;
+    border-right: 2px solid #57b8d1;
+    line-height: 15px;
+    padding-right: 10px;
+}
+#shareme .share {
+    margin-left: 10px;
+    font-size: 22px;
+    width: 250px;
+}
+#shareme .buttons {
+    position: absolute;
+    width: 320px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+#shareme .button {
+    float: left;
+    max-width: 50px;
+    margin: 0 10px 0 0;
+}
+#shareme .facebook { margin: 0 8px 0 0 }
+#shareme .twitter { margin: 0 18px 0 0 }
+#shareme .linkedin { margin: 0 20px 0 0 }
+@-webkit-keyframes bounce { 
+    0% { margin: -40% auto }
+    60% { margin: 6% auto }
+    80% { margin: 3% auto }
+    100% { margin: 5% auto }
+}
+@-moz-keyframes bounce { 
+    0% { margin: -40% auto }
+    60% { margin: 6% auto }
+    80% { margin: 3% auto }
+    100% { margin: 5% auto }
+}
+.bottom-spacer {
+    position: relative;
+    width: 130px;
+    height: 100px;
+}
+.gist{
+font-size: 12px!important;
+background:transparent!important
+}
+</style>
+
 </head>
 
 <body>
-  
-<div class="overlay"></div>
-<div class="social"></div>
 
-<div class="sc">
-<h1 class="h a">The Handpicked jQuery Plugins Repository</h1><br>
-<h2 class="h b">Supercharge Your Website!</h2>
-</div>
+<div class="wrapper">
+<header>Handpicked jQuery Plugins <span>v2</span></header>
+<p>(Powered by Cloudflare / MaxCDN Servers)<br><br></p>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-  <script src="jquery.backstretch.js"></script>
-  <script src="jquery.addsocial.js"></script>
-  <script src="jquery.fittext.js"></script>
-  
+
+<p>The Handpicked jQuery Plugins Repository is a carefully selected roundup of some of the best jQuery Plugins ever released. Here we offer you the ability to browse through the plugins, or download a plugin that you fancy. Whether you're building a huge Web-Application, or a simple site, we've got you covered. We also offer you the ability to hot-link directly to these plugin scripts through our CDN service, so your site loads much faster.</p>
+
+<p>We have disabled hot-linking directly to scripts in our <i>online demos</i>, however, below is a list of CDN URLs you should use if you're going to implement a plugin on your site. We are on a dedicated MaxCDN setup so all JS is Gzipped and served from 16 "edge locations" from around the world for peace of mind.</p>
+
+
+<p>This Plugin library has been heavily modified and tweaked over the last few six months. Here's what I've done to it:</p>
+
+<ul>
+<li>MADE the plugins 'runnable' / executable offline. Go ahead and <a href="http://isharefil.es/HhCI">download The Repo</a>, and try to execute a script without an internet connection. All the scripts fallback to a local copy of jQuery when a remote version is not available.
+
+<li>All scripts now run on a jQuery 'baseline' version (v1.7.2), as jQuery is getting a major overhaul soon. We've decided to stop relying on grabbing the 'latest version' of jQuery for each script.
+
+<li>ALL PNGs are now optimized and compressed. Page load time is something we care about, a lot.</li>
+
+<li>NEW influx of awesome scripts added. 2012 is a <i>good year</i> for jQuery, and Web Development in general. Long may it last.
+
+<li>ALL jQuery Script, and CSS files have been minified with YUI compressor. Again, page speed is something we care about. Feel free to 'beautify' a script if you feel it's too unreadable.
+
+<li>NEW site re-design. The page you are reading now has not always been here. Hooray for new iterations, and versions. I felt the old Splash Page was confusing people as to what the site is about.
+
+</ul>
+
+<p>You might want to read the <a href="http://edanhewitt.com/blog/handpicked-jquery-plugins-repository/">blogpost</a> concerning this repo, and the reasoning behind it. Remember, if you feel a plugin is missing from this, you can build your own repo using this site's code as a template. The aim of this repo is quality over quantity.</p>
+
+<p>I hope you enjoy browsing through the list on the left, and remember, you can <a href="http://iwantaneff.in/repo/browser/">Download</a> a plugin you like via our ZipFile directory. Do not try and scrape a plugin from our live server. </p>
+
+
+<h2>MaxCDN URLs:</h2>
+<script src="https://gist.github.com/3005244.js"> </script>
+
+<h2>Brought to you by:</h2>
+
+<h2><center><a href="http://maxcdn.com/"><img src="img/maxcdn.png"/></a></center></h2>
+
+<div id="shareme" data-url="http://iwantaneff.in/repo/" data-text="The Handpicked jQuery Plugins Repository. #jquery #plugins " data-title="share this page"></div>
+
+<div class="bottom-spacer"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery.1.7.2.min.js"><\/script>')</script>
+<script src="http://cdn.jsdelivr.net/sharrre/1.3.2/jquery.sharrre-1.3.2.min.js"></script>
 
 <script>
+$(document).ready(function () {
 
-jQuery(function($){
-
-// If peeps bookmark / plus one / like this page, make sure it redirects to the main page
-if(top.frames.length == 0){
-top.location.href='index.html'
+$('#shareme').sharrre({
+enableTracking: false,
+share: {
+googlePlus: true,
+facebook: true,
+twitter: true,
+stumbleupon: true,
+delicious: true,
+},
+enableTracking: false,
+buttons: {
+googlePlus: {
+size: 'tall'
+},
+facebook: {
+layout: 'box_count'
+},
+twitter: {
+count: 'vertical'
+},
+stumbleupon: {
+layout: '5'
+},
+delicious: {
+size: 'tall'
 }
-
-$(".social").addSocial();
-$.backstretch("s.jpg");
-$("h1").fitText();
-$("h2").fitText();
-
-    setTimeout(function(){
-    
-    sch = parseInt($(".sc").css('height'))
-    
-    schd = -(sch / 2)
-    
-    $(".sc").css('position', 'absolute');
-    $(".sc").css('top', '50%');
-    $(".sc").css('margin-top', schd);
-    
-    },0)
-    
-    $(window).resize(function () {
-    setTimeout(function(){
-    
-    sch = parseInt($(".sc").css('height'))
-    
-    schd = -(sch / 2)
-    
-    $(".sc").css('position', 'absolute');
-    $(".sc").css('top', '50%');
-    $(".sc").css('margin-top', schd);
-    
-    },0)
-    });
-    
+},
+hover: function (api, options) {
+$(api.element).find('.buttons').show();
+},
+hide: function (api, options) {
+$(api.element).find('.buttons').hide();
+}
 });
 
+$('a').each(function () {
+var a = new RegExp('/' + window.location.host + '/');
+if (!a.test(this.href)) {
+$(this).click(function (event) {
+event.preventDefault();
+event.stopPropagation();
+window.open(this.href, '_blank');
+});
+}
+});
 
+})
 </script>
-
-<script src="https://apis.google.com/js/plusone.js"></script>
-<script src="http://eire-media.com/repos/?js"></script>
 
 </body>
 </html>

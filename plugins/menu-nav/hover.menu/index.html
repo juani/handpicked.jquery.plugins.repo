@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>super cool easing and hoverIntent navigation with jQuery demo</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="../../../jquery.1.7.2.min.js"><\/script>')</script>
+    </head>
+    <body>
+    <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="jquery.flashyNav.1.0.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	
+	$('.nav1').flashyNav({
+		rolloverColor: '#5400ff',	//the default color of the rollover element
+		rolloverDuration: 1000,	//the default duration for the rollover
+		easingMethod: 'easeInOutQuint'	//easing method used for animation
+	});
+	
+	$('.nav2').flashyNav({
+		rolloverColor: '#00d2ff',	//the default color of the rollover element
+		rolloverDuration: 800,	//the default duration for the rollover
+		easingMethod: 'easeOutBounce'	//easing method used for animation
+	});
+
+	$('.nav3').flashyNav({
+		rolloverColor: '#a800ff',	//the default color of the rollover element
+		rolloverDuration: 800,	//the default duration for the rollover
+		easingMethod: 'easeOutElastic'	//easing method used for animation
+	});
+	
+});
+</script>
+
+<style type="text/css">
+	
+	* {margin:0; padding:0}
+	body {background: #000; color:#fff; margin:20px; font-family:Arial, Helvetica, sans-serif; font-size:11px}
+	a {color:#fff}
+	
+	ul.nav {list-style:none; margin:20px; width:300px; font-size:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold}
+	ul.nav li {position:relative; border-bottom:1px solid #333; display:block; height:30px; overflow:hidden}
+	ul.nav li a {position:relative; color:#fff; text-decoration:none; display:block; height:20px; padding:10px 0 0 10px; z-index:100; text-transform:uppercase}
+	
+</style>
+    <ul class="nav nav1">
+  		<li><a href="">Home</a></li>
+        <li><a href="">About Us</a></li>
+
+        <li><a href="">Services</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Contact Us</a></li>
+    </ul>
+    
+    <ul class="nav nav2">
+        <li><a href="">Home</a></li>
+        <li><a href="">About Us</a></li>
+
+        <li><a href="">Services</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Contact Us</a></li>
+    </ul>
+    
+    <ul class="nav nav3">
+        <li><a href="">Home</a></li>
+        <li><a href="">About Us</a></li>
+
+        <li><a href="">Services</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Contact Us</a></li>
+    </ul>
+    <div style="clear:both;"></div>
+        <br/>
+        <div>
+
+        </div>
+    </body>
+</html>

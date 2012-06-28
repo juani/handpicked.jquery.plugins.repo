@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<!--
+
+http://iwantaneff.in/repo/
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                               .g`                              
+                                               j#                               
+                                  f           ]0#                               
+                                ,&            M0#                               
+                               ]0             00#                               
+                               00             00#                               
+                ,             #00             000f                              
+              y#             ]000             0000                              
+             _0^             0000             M0000                             
+            p00              0000              0000&_                           
+           j00f             _0000              400000g                          
+          _000f             00000_              M00000&_                        
+         .0000f             000008               ]000000gq                p     
+         ]0000f             M00000f               `M000000NN,,         ,j0!     
+         00000f              00000M                 *M00000000MMMMMMMMM0M`      
+         00000f              000000#                  ]@00000000000000M         
+        000000f              ]000000I                     !@FM00@M@F            
+        000000f              ~0000000g                                          
+        0000000               #00000008                                         
+        0000000                00000000&                                        
+        0000000#                #00000000,                                   +  
+        00000000r               ^000000000pg                               _pf  
+        000000001                ~0000000000&g_                          _j0^   
+        ~00000000_                `R0000000000&g_                      _j00~    
+         000000000,                 ~000000000000Ngg_,             __jg000!     
+         400000000&                  `M000000000000000MM&,,,,,,,jNN00000M`      
+         *000000000M                   `#00000000000000000000000000000M`        
+          0000000000#,                    "M000000000000000000000000M!          
+           00000000000                       !@Q0000000000000000@@!             
+           ]00000000000,                         `MMFMMFMMFMMF'                 
+            #00000000000L                                                       
+             000000000000#,                                                     
+              0000000000000p                                               y    
+              `00000000000000N_                                          _p     
+                000000000000000g__                                     _j0f     
+                 #000000000000000&p_                                 _j0M^      
+                  ~00000000000000000gg_                           _jg000f       
+                    M0000000000000000000M1_,                  __jN0000M`        
+                     ]M000000000000000000000MMMM,,,,,,,,,,#MMM0000000T          
+                       "0000000000000000000000000000000000000000000M            
+                          M00000000000000000000000000000000000000M              
+                            MM0000000000000000000000000000000009                
+                               ~#00000000000000000000000000P~!                  
+                                  ~~M000000000000000000M~~                      
+                                         ~~~~~~~~~~'                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="../../../jquery.1.7.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="jquery.caret.1.02.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var mouseX = 0;
+            var mouseY = 0;
+
+            $("#description").mousemove(function(e) {
+                // track mouse position
+                mouseX = e.pageX;
+                mouseY = e.pageY;
+            });
+            
+            $("#description").mousedown(function() {
+                $("#menu").fadeOut("1000");
+            });
+
+            $("#description").select(function() {
+                // get the mouse position an show the menu
+                $("#menu").css("top", mouseY - 30).css("left", mouseX + 10).fadeIn("1000");
+            });
+
+            $("#bold").click(function() {
+                wrapText("<b>", "</b>");
+                $("#menu").fadeOut("1000");
+            });
+            
+            $("#italic").click(function() {
+                wrapText("<i>", "</i>");
+                $("#menu").fadeOut("1000");
+            });
+            
+            $("#underline").click(function() {
+                wrapText("<u>", "</u>");
+                $("#menu").fadeOut("1000");
+            });
+            
+            $("#link").click(function() {
+                var url = prompt("Enter URL", "http://");
+                if (url != null)
+                    wrapText("<a href='" + url + "'>", "</a>");
+                $("#menu").fadeOut("1000");
+            });
+
+            function wrapText(startText, endText){
+                // Get the text before the selection
+                var before = $("#description").val().substring(0, $("#description").caret().start);
+                
+                // Get the text after the selection
+                var after = $("#description").val().substring($("#description").caret().end, $("#description").val().length);
+                
+                // merge text before the selection, a selection wrapped with inserted text and a text after the selection
+                $("#description").val(before + startText + $("#description").caret().text + endText + after);
+                
+                // Update the preview
+                $("#preview").html($("#description").val());
+            }
+        });
+    </script>
+    <style type="text/css">
+        body { font-size:13px; font-family:Lucida Sans, Lucida Sans Unicode, Arial, Sans-Serif; color:#666; margin:20px;}
+        #main { width:960px; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; padding:20px; background-color:#f6f6f6;}
+        #header { text-align:center; border-bottom:solid 1px #b2b3b5; margin: 0 0 20px 0; }
+        #menu {padding:5px; background-color:#f5f5f5;background-color:rgba(245, 245, 245, 0.6); display:none; 
+               position:absolute; top:0px; left:0px; overflow:hidden;
+               border:solid 1px #929292; border-radius:3px; -moz-border-radius:3px; -webit-border-radius:3px; 
+               box-shadow: 5px 5px 5px #888; -moz-box-shadow: 1px 1px 3px #555; -webkit-box-shadow: 5px 5px 5px #888;}
+        #menu:hover {background-color:rgba(245, 245, 245, 1);}
+        #menu a { padding:3px 5px; border:solid 1px transparent; color:#000; text-decoration:none; font-size:14px;
+            float:left; display:block; text-align:center;}
+        #menu a:hover { border:solid 1px #bea881; background-color:#fff2cb;
+            background: -moz-linear-gradient(top, rgba(255, 251, 239, 1), rgba(255, 220, 87, 1));
+            border-radius:3px; -moz-border-radius:3px; -webit-border-radius:3px; }
+        #preview { width:400px; background-color:#f8f8f8; border:solid 1px #929292; padding:10px;
+            border-radius:3px; -moz-border-radius:3px; -webit-border-radius:3px;}
+        #preview b, #preview u, #preview i {color:#c30;}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <img src="jaws_logo.png" alt="JankoAtWrpSpeed demos" />
+            <h3>Demo for <a href="http://www.jankoatwarpspeed.com/post/2010/05/23/microsoft-office-minibar-jQuery-CSS3.aspx">Why and how to create Microsoft Office Minibar with jQuery and CSS3</a></h3>
+        </div>
+        <div>
+            <p style="font-size:16px;">
+            Select some text here:<br />
+            <textarea id="description" rows="8" cols="50">The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.</textarea>
+            </p>
+            Preview:
+            <div id="preview">The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.</div>
+            <div id="menu">
+                <a href="#" id="bold">b</a>
+                <a href="#" id="italic">i</a>
+                <a href="#" id="underline">u</a>
+                <a href="#" id="link">Link</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
